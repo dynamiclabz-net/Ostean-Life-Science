@@ -803,7 +803,7 @@ h6 {
 }
 
 .footer .footer-links ul li {
-  padding: 10px 0;
+  padding: 7px 0;
   display: flex;
   align-items: center;
 }
@@ -812,14 +812,15 @@ h6 {
   padding-top: 0;
 }
 
-.footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  display: inline-block;
-  line-height: 1;
+.footer .footer-links ul a { 
+  color: color-mix(in srgb, var(--default-color), transparent 30%); 
+  transition: 0.3s; 
+  text-decoration: none !important; /* Removes the underline */
 }
 
-.footer .footer-links ul a:hover {
-  color: var(--accent-color);
+.footer .footer-links ul a:hover { 
+  color: var(--accent-color); 
+  text-decoration: none !important; /* Ensures it doesn't underline on hover */
 }
 
 .footer .footer-contact p {
@@ -2492,4 +2493,126 @@ section,
         left: auto !important;
         right: 0 !important;
     }
+}
+
+/* --- News & Events Cards --- */
+.news-card {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid rgba(0,0,0,0.03) !important;
+}
+.news-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
+}
+.news-card a {
+  transition: all 0.3s ease;
+}
+.news-card:hover a {
+  color: #000 !important;
+  letter-spacing: 0.5px;
+}
+
+/* --- Premium View All News Button --- */
+.btn-view-all {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    background-color: var(--accent-color);
+    color: var(--contrast-color) !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    text-decoration: none;
+}
+
+.btn-view-all i {
+    margin-left: 12px;
+    font-size: 1.4rem;
+    transition: transform 0.4s ease;
+}
+
+.btn-view-all:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px color-mix(in srgb, var(--accent-color), transparent 40%);
+    background-color: color-mix(in srgb, var(--accent-color), black 10%); /* Slightly darkens on hover */
+}
+
+.btn-view-all:hover i {
+    transform: translateX(8px);
+}
+
+/* --- Premium Horizontal Blog Cards --- */
+.blog-card-horizontal {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid rgba(0,0,0,0.03) !important;
+}
+
+.blog-card-horizontal:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.08) !important;
+}
+
+.blog-card-horizontal .img-hover-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.blog-card-horizontal:hover .img-hover-zoom img {
+  transform: scale(1.05);
+}
+
+.blog-card-horizontal a.read-more-link {
+  transition: all 0.3s ease;
+}
+
+.blog-card-horizontal:hover a.read-more-link {
+  color: #000 !important;
+  letter-spacing: 0.5px;
+}
+
+/* ===================================================================
+ * PREMIUM OSTEON BUTTONS
+ * =================================================================== */
+
+/* Solid Blue Button */
+.btn-oste {
+    display: inline-block !important;
+    background-color: #106ba7 !important; /* Osteon Blue */
+    color: #ffffff !important; /* White Text */
+    border: 2px solid #106ba7 !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.btn-oste:hover {
+    background-color: transparent !important;
+    color: #106ba7 !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px rgba(16, 107, 167, 0.25) !important;
+}
+
+/* Outlined Blue Button */
+.btn-oste-outline {
+    display: inline-block !important;
+    background-color: transparent !important;
+    color: #106ba7 !important; /* Osteon Blue Text */
+    border: 2px solid #106ba7 !important; /* Osteon Blue Border */
+    padding: 12px 36px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.btn-oste-outline:hover {
+    background-color: #106ba7 !important;
+    color: #ffffff !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px rgba(16, 107, 167, 0.25) !important;
 }

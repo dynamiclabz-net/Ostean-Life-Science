@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Blogs - Osteon Life Science</title>
+
+  <link href="static/img/loaderlogo.png" rel="icon" />
+
+  <meta name="description" content="Read insights, perspectives, and industry trends from Osteon Life Science." />
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Inter:wght@100;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link href="static/css/main.css" rel="stylesheet" />
+</head>
+
+<body class="about-page bg-light">
+
+  <div id="spinner" class="spinner-container">
+    <div class="spinner"></div>
+    <img src="static/img/loaderlogo.png" alt="Logo" class="spinner-logo" />
+  </div>
+
+  <header id="header" class="header d-flex align-items-center fixed-top bg-white shadow-sm">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center p-3">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img class="img-fluid" src="static/img/OSTEON LOGO/logo.png" alt="Osteon Logo" />
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="product-detail.html">Trauma</a></li>
+              <li><a href="product-detail.html">Spine</a></li>
+              <li><a href="product-detail.html">Joints</a></li>
+              <li><a href="product-detail.html">Craniomaxillofacial</a></li>
+              <li><a href="product-detail.html">Arthroscopy</a></li>
+            </ul>
+          </li>
+          <li><a href="news.html">News & Events</a></li>
+          <li><a href="index.html#services">Network</a></li>
+          <li><a href="index.html#services">Career</a></li>
+          <li><a href="blog.html" class="active">Blogs</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+
+          <li>
+            <a href="index.html#contact"><span class="btn-oste" style="border-radius: 50px">Contact Us</span></a>
+          </li>
+
+          <div class="dropdown ms-3 lang-dropdown">
+            <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 50%">
+              <img src="static/img/en.png" id="currentLangIcon" alt="Lang" width="24" height="24" class="me-2" />
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item" href="#" onclick="changeLanguage('en', 'static/img/en.png')"><img src="static/img/en.png" alt="English" width="24" height="24" class="me-2" /> English</a></li>
+              <li><a class="dropdown-item" href="#" onclick="changeLanguage('fr', 'static/img/fr.png')"><img src="static/img/fr.png" alt="Français" width="24" height="24" class="me-2" /> Français</a></li>
+              <li><a class="dropdown-item" href="#" onclick="changeLanguage('es', 'static/img/es.png')"><img src="static/img/es.png" alt="Español" width="24" height="24" class="me-2" /> Español</a></li>
+              <li><a class="dropdown-item" href="#" onclick="changeLanguage('de', 'static/img/de.png')"><img src="static/img/de.png" alt="Deutsch" width="24" height="24" class="me-2" /> Deutsch</a></li>
+            </ul>
+          </div>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    
+    <section class="py-5 bg-white" style="margin-top: 80px;">
+      <div class="container text-center py-5">
+        <h1 class="display-4 font-weight-bold text-oste mb-3">Insights & Perspectives</h1>
+        <p class="lead text-muted">Read our expert insights on orthopedic innovations, patient care, and industry trends.</p>
+      </div>
+    </section>
+
+    <section class="blogs-section py-5">
+      <div class="container">
+        <div class="row g-4">
+          
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden blog-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-5 position-relative img-hover-zoom">
+                  <img src="static/img/features-3.jpg" class="w-100 h-100" style="object-fit: cover; min-height: 250px;" alt="Innovation">
+                  <div class="position-absolute top-0 start-0 m-3">
+                    <span class="badge bg-primary px-3 py-2 rounded-pill shadow-sm">Innovation</span>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4 d-flex flex-column h-100 bg-white">
+                    <div class="text-muted small mb-3 d-flex align-items-center">
+                      <i class="bi bi-person-circle fs-4 me-2 text-oste"></i>
+                      <span class="fw-bold">By Dr. Sarah Jenkins</span>
+                    </div>
+                    <h4 class="card-title fw-bold text-dark mb-3 fs-5">The Future of 3D Printed Orthopedic Implants</h4>
+                    <p class="card-text text-muted flex-grow-1 small">Explore how 3D printing technology is revolutionizing patient-specific trauma implants, reducing surgery times, and improving anatomical fit.</p>
+                    <a href="blog_detail.html" class="fw-bold text-oste text-decoration-none mt-2 read-more-link">Read Full Article <i class="bi bi-arrow-right ms-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden blog-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-5 position-relative img-hover-zoom">
+                  <img src="static/img/about-company-2.jpg" class="w-100 h-100" style="object-fit: cover; min-height: 250px;" alt="Patient Care">
+                  <div class="position-absolute top-0 start-0 m-3">
+                    <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm">Patient Care</span>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4 d-flex flex-column h-100 bg-white">
+                    <div class="text-muted small mb-3 d-flex align-items-center">
+                      <i class="bi bi-person-circle fs-4 me-2 text-oste"></i>
+                      <span class="fw-bold">By Michael Chen</span>
+                    </div>
+                    <h4 class="card-title fw-bold text-dark mb-3 fs-5">Post-Surgery Recovery: Best Practices for Joints</h4>
+                    <p class="card-text text-muted flex-grow-1 small">A comprehensive guide for patients navigating the critical first 6 weeks following a total hip or knee arthroplasty procedure.</p>
+                    <a href="blog_detail.html" class="fw-bold text-oste text-decoration-none mt-2 read-more-link">Read Full Article <i class="bi bi-arrow-right ms-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden blog-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-5 position-relative img-hover-zoom">
+                  <img src="static/img/about-company-3.jpg" class="w-100 h-100" style="object-fit: cover; min-height: 250px;" alt="Industry">
+                  <div class="position-absolute top-0 start-0 m-3">
+                    <span class="badge bg-warning text-dark px-3 py-2 rounded-pill shadow-sm">Industry</span>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4 d-flex flex-column h-100 bg-white">
+                    <div class="text-muted small mb-3 d-flex align-items-center">
+                      <i class="bi bi-person-circle fs-4 me-2 text-oste"></i>
+                      <span class="fw-bold">By Osteon Editorial</span>
+                    </div>
+                    <h4 class="card-title fw-bold text-dark mb-3 fs-5">Navigating ISO 13485 Compliance in Manufacturing</h4>
+                    <p class="card-text text-muted flex-grow-1 small">Understanding the strict regulatory requirements and quality control measures necessary to produce world-class medical devices.</p>
+                    <a href="blog_detail.html" class="fw-bold text-oste text-decoration-none mt-2 read-more-link">Read Full Article <i class="bi bi-arrow-right ms-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden blog-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-5 position-relative img-hover-zoom">
+                  <img src="static/img/about-company-1.jpg" class="w-100 h-100" style="object-fit: cover; filter: hue-rotate(45deg); min-height: 250px;" alt="Materials">
+                  <div class="position-absolute top-0 start-0 m-3">
+                    <span class="badge bg-secondary px-3 py-2 rounded-pill shadow-sm">Materials</span>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4 d-flex flex-column h-100 bg-white">
+                    <div class="text-muted small mb-3 d-flex align-items-center">
+                      <i class="bi bi-person-circle fs-4 me-2 text-oste"></i>
+                      <span class="fw-bold">By Engineering Team</span>
+                    </div>
+                    <h4 class="card-title fw-bold text-dark mb-3 fs-5">Titanium vs Stainless Steel in Trauma Plates</h4>
+                    <p class="card-text text-muted flex-grow-1 small">An in-depth biomechanical comparison of the two most common metals used in modern fracture fixation and orthopedic trauma.</p>
+                    <a href="blog_detail.html" class="fw-bold text-oste text-decoration-none mt-2 read-more-link">Read Full Article <i class="bi bi-arrow-right ms-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden blog-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-5 position-relative img-hover-zoom">
+                  <img src="static/img/features-1.jpg" class="w-100 h-100" style="object-fit: cover; filter: grayscale(20%); min-height: 250px;" alt="Spine">
+                  <div class="position-absolute top-0 start-0 m-3">
+                    <span class="badge bg-info text-dark px-3 py-2 rounded-pill shadow-sm">Spine</span>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4 d-flex flex-column h-100 bg-white">
+                    <div class="text-muted small mb-3 d-flex align-items-center">
+                      <i class="bi bi-person-circle fs-4 me-2 text-oste"></i>
+                      <span class="fw-bold">By Dr. Alan Reyes</span>
+                    </div>
+                    <h4 class="card-title fw-bold text-dark mb-3 fs-5">Minimally Invasive Techniques in Spinal Fusions</h4>
+                    <p class="card-text text-muted flex-grow-1 small">How new retractor systems and specialized pedicle screws are enabling surgeons to perform complex fusions with smaller incisions.</p>
+                    <a href="blog_detail.html" class="fw-bold text-oste text-decoration-none mt-2 read-more-link">Read Full Article <i class="bi bi-arrow-right ms-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden blog-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-5 position-relative img-hover-zoom">
+                  <img src="static/img/features-2.jpg" class="w-100 h-100" style="object-fit: cover; filter: brightness(110%); min-height: 250px;" alt="Global Trade">
+                  <div class="position-absolute top-0 start-0 m-3">
+                    <span class="badge bg-dark px-3 py-2 rounded-pill shadow-sm text-white">Global Trade</span>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4 d-flex flex-column h-100 bg-white">
+                    <div class="text-muted small mb-3 d-flex align-items-center">
+                      <i class="bi bi-person-circle fs-4 me-2 text-oste"></i>
+                      <span class="fw-bold">By Osteon Editorial</span>
+                    </div>
+                    <h4 class="card-title fw-bold text-dark mb-3 fs-5">The Shifting Landscape of Medical Supply Chains</h4>
+                    <p class="card-text text-muted flex-grow-1 small">Why more international medical distributors are looking toward India for high-quality OEM and ODM implant manufacturing.</p>
+                    <a href="blog_detail.html" class="fw-bold text-oste text-decoration-none mt-2 read-more-link">Read Full Article <i class="bi bi-arrow-right ms-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <nav aria-label="Blog pagination" class="mt-5 pt-3" data-aos="fade-up">
+          <ul class="pagination justify-content-center border-0">
+            <li class="page-item disabled">
+              <a class="page-link border-0 shadow-sm rounded-circle mx-1 text-muted" href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-chevron-left"></i></a>
+            </li>
+            <li class="page-item active"><a class="page-link border-0 shadow-sm rounded-circle mx-1 bg-primary text-white" href="#">1</a></li>
+            <li class="page-item"><a class="page-link border-0 shadow-sm rounded-circle mx-1 text-dark" href="#">2</a></li>
+            <li class="page-item"><a class="page-link border-0 shadow-sm rounded-circle mx-1 text-dark" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link border-0 shadow-sm rounded-circle mx-1 text-dark" href="#"><i class="bi bi-chevron-right"></i></a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center mb-4">
+            <img src="static/img/OSTEON LOGO/logo.png" alt="Osteon Life Science" style="max-height: 65px;" />
+          </a>
+          <div class="footer-contact">
+            <p>181-182, PUSHAKAR INDUSTRIAL & LOGISTICS PARK,</p>
+            <p>SARKHEJ BAVLA HIGHWAY, CHANGODAR,</p>
+            <p>AHMEDABAD-382213</p>
+            <p class="mt-3">
+              <strong>Email:</strong> <a href="mailto:info@osteonlife.com" class="text-dark text-decoration-none">info@osteonlife.com</a>
+            </p>
+            <p>
+              <strong>Website:</strong> <a href="https://www.osteonlife.com" class="text-dark text-decoration-none">www.osteonlife.com</a>
+            </p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Products</h4>
+          <ul>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Product</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>
+            Subscribe to our newsletter and receive the latest news about our
+            products and services!
+          </p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form">
+              <input type="email" name="email" placeholder="Enter Email" /><input type="submit" value="Subscribe" />
+            </div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">
+              Your subscription request has been sent. Thank you!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>
+        © <span>Copyright</span>
+        <strong class="px-1 sitename">Osteon Life Science</strong><span>All Rights Reserved</span>
+      </p>
+      <!-- <div class="credits"> -->
+      <p>
+        Designed by
+        <a href="https://www.dynamiclabz.net/"><b>Dynamic Labz</b></a>
+      </p>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="static/js/main.js"></script>
+
+</body>
+</html>
