@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="static/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Osteon Life Science</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Favicons -->
+    <link href="static/img/favicon.png" rel="icon" />
+    <link
+      href="static/img/apple-touch-icon.png"
+      rel="apple-touch-icon"
+    />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="static/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="static/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="static/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link href="static/css/main.css" rel="stylesheet" />
+
+    <!-- Swiper.js CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #fff;
+        color: #333;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        min-height: 100vh;
+        padding: 4rem 1rem;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #106ba7;
+      }
+
+      .header p {
+        color: #555;
+        font-size: 1.1rem;
+      }
+
+      .downloads-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .download-card {
+        background: #f8f9fa;
+        border: 2px solid #106ba7;
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .download-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .download-card img {
+        width: 300px;
+        object-fit: cover;
+        margin-bottom: 1.5rem;
+      }
+
+      .certificate-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #106ba7;
+        margin-bottom: 0.75rem;
+      }
+
+      .description {
+        color: #555;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .download-button {
+        display: inline-block;
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        background: #106ba7;
+        color: #fff;
+        border: none;
+        transition: all 0.3s ease;
+      }
+
+      .download-button:hover {
+        background: #0c5a8b;
+      }
+
+      @media (max-width: 992px) {
+        .downloads-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2.5rem;
+        }
+
+        .downloads-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .download-card {
+          max-width: 400px;
+          margin: 0 auto;
+        }
+      }
+    </style>
+    <style>
+      .dialog-box {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        width: 300px;
+        text-align: center;
+      }
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .disabled {
+        background: gray;
+        cursor: not-allowed;
+      }
+      .spinner-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      .spinner {
+        width: 66px;
+        height: 66px;
+        display: grid;
+        border: 4.5px solid #0000;
+        border-radius: 50%;
+        border-right-color: var(--eh-blue-primary);
+        animation: spinner-animation 1s infinite linear;
+        position: relative;
+      }
+
+      .spinner::before,
+      .spinner::after {
+        content: "";
+        grid-area: 1/1;
+        margin: 2.2px;
+        border: inherit;
+        border-radius: 50%;
+        animation: spinner-animation 2s infinite;
+      }
+
+      .spinner::after {
+        margin: 8.9px;
+        animation-duration: 3s;
+      }
+
+      /* Logo in the center */
+      .spinner-logo {
+        position: absolute;
+        width: 30px;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+      }
+
+      @keyframes spinner-animation {
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+
+      .hidden {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <div id="spinner" class="spinner-container">
+    <div class="spinner"></div>
+    <img src="/static/loaderlogo.png" alt="Logo" class="spinner-logo" />
+  </div>
+
+  {% include 'header.html' %}
+
+  <body>
+    <div class="mt-5 container">
+      <div class="header">
+        <h1>Download Your Certificates</h1>
+        <p>Select your certificate and download it instantly.</p>
+      </div>
+
+      <div class="downloads-grid">
+        <!-- Certificate 1 -->
+        <div class="w-200px download-card">
+          <img
+            class="certificate-icon"
+            src="/media/samplepdf.png"
+            alt="Certificate Icon"
+          />
+          <div class="certificate-name">Certificate of Excellence</div>
+          <p class="description">
+            Awarded for outstanding performance in AI & Data Science.
+          </p>
+          <a href="#" class="download-button" onclick="openDialog()"
+            >Download</a
+          >
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="download-card">
+          <img src="/media/samplepdf.png" alt="Certificate Icon" />
+          <div class="certificate-name">Project Completion</div>
+          <p class="description">
+            Recognizing successful completion of the Hackathon project.
+          </p>
+          <a href="#" class="download-button" onclick="openDialog()"
+            >Download</a
+          >
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="download-card">
+          <img src="/media/samplepdf.png" alt="Certificate Icon" />
+          <div class="certificate-name">Leadership Award</div>
+          <p class="description">
+            Honoring leadership skills and project management abilities.
+          </p>
+          <a href="#" class="download-button" onclick="openDialog()"
+            >Download</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="dialog-box" id="dialogBox">
+      <h4>Enter Your Email</h4>
+      <input
+        type="email"
+        id="emailInput"
+        class="form-control mt-2"
+        placeholder="Enter your email"
+        oninput="validateEmail()"
+      />
+      <button
+        id="downloadBtn"
+        class="btn btn-primary mt-3 disabled"
+        disabled
+        onclick="downloadCertificate()"
+      >
+        Download
+      </button>
+      <button class="btn btn-secondary mt-3" onclick="closeDialog()">
+        Cancel
+      </button>
+    </div>
+
+    <script>
+      function openDialog() {
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("dialogBox").style.display = "block";
+      }
+
+      function closeDialog() {
+        document.getElementById("overlay").style.display = "none";
+        document.getElementById("dialogBox").style.display = "none";
+      }
+
+      function validateEmail() {
+        const emailInput = document.getElementById("emailInput");
+        const downloadBtn = document.getElementById("downloadBtn");
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailPattern.test(emailInput.value)) {
+          downloadBtn.classList.remove("disabled");
+          downloadBtn.removeAttribute("disabled");
+        } else {
+          downloadBtn.classList.add("disabled");
+          downloadBtn.setAttribute("disabled", true);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+          document.getElementById("spinner").classList.add("hidden");
+        }, 1500);
+      });
+    </script>
+  </body>
+</html>

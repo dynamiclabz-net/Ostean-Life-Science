@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Osteon Life Science</title>
+
+  <!-- Favicons -->
+  <link href="static/img/loaderlogo.png" rel="icon" />
+
+  <!-- Meta -->
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="static/css/main.css" rel="stylesheet" />
+  <link href="static/css/loader.css" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Swiper.js CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+
+<body class="index-page">
+  
+  <!-- Loader -->
+  <div id="spinner" class="spinner-container">
+    <div class="spinner"></div>
+    <img src="static/img/loaderlogo.png" alt="Logo" class="spinner-logo" />
+  </div>
+  <script src="static/js/loader.js"></script>
+
+  <!-- Navbar -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center p-3">
+      <a href="/" class="logo d-flex align-items-center me-auto">
+        <img class="img-fluid" src="static/img/OSTEON LOGO/logo.png" alt="" />
+        <!-- <h1 class="sitename">Osteon Life Science</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <!-- <li><a href="index.html#hero" class="active">Home</a></li> -->
+          <li><a href="about-us.html">About Us</a></li>
+          <!-- <li><a href="index.html#features">Products</a></li> -->
+          <li class="dropdown">
+            <a href="#"><span>Products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li class="dropdown">
+                <a href="#"><span>Trauma</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="product-detail.html">Plates</a></li>
+                  <li><a href="product-detail.html">Nails</a></li>
+                  <li><a href="product-detail.html">Screws</a></li>
+                  <li><a href="product-detail.html">Pins</a></li>
+                  <li><a href="product-detail.html">Wires</a></li>
+                </ul>
+              </li>
+              
+              <li class="dropdown">
+                <a href="#"><span>Spine</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="product-detail.html">Screws</a></li>
+                  <li><a href="product-detail.html">Cages</a></li>
+                  <li><a href="product-detail.html">Rods</a></li>
+                </ul>
+              </li>
+              
+              <li class="dropdown">
+                <a href="#"><span>Joints</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="product-detail.html">Hip</a></li>
+                  <li><a href="product-detail.html">Radial Head</a></li>
+                  <li><a href="product-detail.html">Knee & Shoulder</a></li>
+                </ul>
+              </li>
+              
+              <li class="dropdown">
+                <a href="#"><span>Craniomaxillofacial</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="product-detail.html">Screws</a></li>
+                  <li><a href="product-detail.html">Plates</a></li>
+                  <li><a href="product-detail.html">Mesh</a></li>
+                </ul>
+              </li>
+              
+              <li class="dropdown">
+                <a href="#"><span>Arthroscopy</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="product-detail.html">ACL Screw</a></li>
+                  <li><a href="product-detail.html">Endo-button</a></li>
+                  <li><a href="product-detail.html">Anchors</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="news">News & Events</a></li>
+          <li><a href="index.html#services">Network</a></li>
+          <li><a href="index.html#services">Career</a></li>
+
+          <li><a href="blog/posts/home">Blogs</a></li>
+          <li><a href="#">Downloads</a></li>
+
+          <!-- <li><a href="index.html#pricing">Pricing</a></li> -->
+          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+          <!-- <li class="nav-item dropdown dropdown-mega position-static">
+            <a class="nav-link dropdown-toggle show" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="true" id="megamenu">Megamenu</a>
+            <div class="dropdown-menu shadow show" data-bs-popper="static">
+              <div class="mega-content px-4">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                      <h5>Pages</h5>
+                      <div class="list-group">
+                        <a class="list-group-item" href="#">Accomodations</a>
+                        <a class="list-group-item" href="#">Terms &amp; Conditions</a>
+                        <a class="list-group-item" href="#">Privacy</a>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                      <h5>Card</h5>
+                      <div class="card">
+                  <img src="https://via.placeholder.com/320x180" class="img-fluid" alt="image">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                      <h5>Lot of Pages</h5>
+                      <p>Lorem ipsum dolo sit achmet muhamed borlan de irtka.
+                    </p></div>
+                    <div class="col-12 col-sm-12 col-md-3 py-4">
+                      <h5>Damn, so many</h5>
+                      <div class="list-group">
+                        <a class="list-group-item" href="#">Accomodations</a>
+                        <a class="list-group-item" href="#">Terms &amp; Conditions</a>
+                        <a class="list-group-item" href="#">Privacy</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li> -->
+          <li>
+            <a href="index.html#contact"><span class="btn-oste" style="border-radius: 50px">Contact Us</span></a>
+          </li>
+          <!-- Language Dropdown -->
+          <div class="dropdown ms-3 lang-dropdown">
+            <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" id="languageDropdown"
+              data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 50%">
+              <img src="static/img/en.png" id="currentLangIcon" alt="Lang" width="24" height="24" class="me-2" />
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+              <li>
+                <a class="dropdown-item" href="#" onclick="changeLanguage('en', 'static/img/en.png')">
+                  <img src="static/img/en.png" alt="English" width="24" height="24" class="me-2" />
+                  English
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="changeLanguage('fr', 'static/img/fr.png')">
+                  <img src="static/img/fr.png" alt="Français" width="24" height="24" class="me-2" />
+                  Français
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="changeLanguage('es', 'static/img/es.png')">
+                  <img src="static/img/es.png" alt="Español" width="24" height="24" class="me-2" />
+                  Español
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="changeLanguage('de', 'static/img/de.png')">
+                  <img src="static/img/de.png" alt="Deutsch" width="24" height="24" class="me-2" />
+                  Deutsch
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bootstrap Icons -->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+
+          <!-- Include Bootstrap Icons -->
+        </ul>
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero Section -->
+    <!-- <section id="hero" class="hero section">
+      <div class="hero-bg">
+        <img src="static/img/hero-bg-light.webp" alt="">
+      </div>
+      <div class="container text-center">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <h1 data-aos="fade-up">Welcome to <span>Osteon Life Science</span></h1>
+          <p data-aos="fade-up" data-aos-delay="100">Quickly start your project now and set the stage for success<br></p>
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+            <a href="#about" class="btn-get-started">Get Started</a>
+            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+          <img src="static/img/hero-services-img.webp" class="img-fluid hero-img" alt="" data-aos="zoom-out" data-aos-delay="300">
+        </div>
+      </div>
+
+    </section>/Hero Section -->
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="hero-bg">
+        <img src="static/img/hero-bg-light.webp" alt="Background Image" />
+      </div>
+      <div class="container text-center">
+        <div class="swiper hero-carousel">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="row banner-content p-3 text-md-start">
+                <div class="content-wrapper col-md-7 d-flex flex-column justify-content-center">
+                  <div class="categories my-3">100% Loream</div>
+                  <h3 class="display-4 hero-heading">
+                    Lorem ipsum dolor sit amet, consectetur
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Dignissim massa diam elementum.
+                  </p>
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <a href="#"
+                        class="w-100 btn btn-oste-outline btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Button
+                        S</a>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <a href="#" class="w-100 btn btn-oste btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Loream
+                        S</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="img-wrapper col-md-5 text-end">
+                  <img src="static/img/main_banner_product.png" class="img-fluid" alt="Product Image" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 (Mirrored Layout) -->
+            <div class="swiper-slide">
+              <div class="row banner-content p-3 text-md-start flex-md-row-reverse">
+                <div class="content-wrapper col-md-7 d-flex flex-column justify-content-center">
+                  <div class="categories my-3">80% Dolor Sit</div>
+                  <h3 class="display-4 hero-heading">
+                    Consectetur adipiscing elit, lorem ipsum
+                  </h3>
+                  <p>
+                    Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                    dapibus leo.
+                  </p>
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <a href="#"
+                        class="w-100 btn btn-oste-outline btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Explore</a>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <a href="#" class="w-100 btn btn-oste btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Learn
+                        More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="img-wrapper col-md-5 text-end">
+                  <img src="static/img/main_banner_product.png" class="img-fluid" alt="Product Image" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="row banner-content p-3 text-md-start">
+                <div class="content-wrapper col-md-7 d-flex flex-column justify-content-center">
+                  <div class="categories my-3">50% Ipsum</div>
+                  <h3 class="display-4 hero-heading">
+                    Sapien, tristique vel augue et, suscipit
+                  </h3>
+                  <p>
+                    Curabitur aliquet quam id dui posuere blandit.
+                    Pellentesque in ipsum id orci porta dapibus.
+                  </p>
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <a href="#"
+                        class="w-100 btn btn-oste-outline btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Get
+                        Started</a>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <a href="#" class="w-100 btn btn-oste btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Read
+                        More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="img-wrapper col-md-5 text-end">
+                  <img src="static/img/main_banner_product.png" class="img-fluid" alt="Product Image 2" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper.js Initialization -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".hero-carousel", {
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      });
+    </script>
+
+    <!-- About Us -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row gx-4 align-items-center justify-content-between">
+          <div class="col-md-5 order-2 order-md-1">
+            <div class="mt-5 mt-md-0">
+              <span class="sec-head-oste">Who We Are</span>
+              <h2 class="display-5 fw-bold text-oste">About Us</h2>
+              <p class="lead">
+                Osteon Life Science Pvt. Ltd. is a next-generation manufacturer of orthopedic implants and instruments,
+                driven by INNOVATION, PRECISION, and a PASSION for improving lives.
+              </p>
+              <p class="lead">
+                Based in India, we design and produce world-class orthopedic solutions that meet global quality and
+                regulatory standards
+              </p>
+              <div class="row gx-5 py-2">
+                <div class="col-sm-6 mb-2">
+                  <p class="fw-bold mb-2">
+                    <i class="fa fa-check text-oste me-3"></i>Perfect Planning
+                  </p>
+                  <p class="fw-bold mb-2">
+                    <i class="fa fa-check text-oste me-3"></i>Professional
+                    Workers
+                  </p>
+                  <p class="fw-bold mb-2">
+                    <i class="fa fa-check text-oste me-3"></i>First Working
+                    Process
+                  </p>
+                </div>
+                <div class="col-sm-6 mb-2">
+                  <p class="fw-bold mb-2">
+                    <i class="fa fa-check text-oste me-3"></i>Efficient
+                    Execution
+                  </p>
+                  <p class="fw-bold mb-2">
+                    <i class="fa fa-check text-oste me-3"></i>Customer Focus
+                  </p>
+                  <p class="fw-bold mb-2">
+                    <i class="fa fa-check text-oste me-3"></i>Advanced
+                    Technology
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 offset-md-1 order-1 order-md-2">
+            <div class="row gx-2 gx-lg-3">
+              <!-- <div class="col-6"> -->
+                <div class="mb-2">
+                  <img class="img-fluid rounded-3" src="static/img/about-company-3.jpg" />
+                </div>
+              <!-- </div> -->
+              <!-- <div class="col-6">
+                <div class="mb-2">
+                  <img class="img-fluid rounded-3" src="static/img/tabs-2.jpg" />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="mb-2">
+                  <img class="img-fluid rounded-3" src="static/img/tabs-3.jpg" />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="mb-2">
+                  <img class="img-fluid rounded-3" src="static/img/tabs-1.jpg" />
+                </div>
+              </div> -->
+            </div>
+            <div class="embed-responsive embed-responsive-1by1">
+              <!-- <iframe width="633" height="480" src="https://www.youtube.com/embed/zpOULjyy-n8" title="REO Speedwagon - Can&#39;t Fight This Feeling (Official HD Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Products -->
+    <section class="py-5 light-background">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="bootstrap-tabs product-tabs">
+              <div class="row border-bottom my-5">
+                <div class="col-12 col-md-4">
+                  <h2 class="display-5 fw-bold text-oste">Our Products</h2>
+                </div>
+                <div class="col-12 col-md-8 text-md-end text-start">
+                  <nav>
+                    <div class="nav nav-tabs justify-content-md-end border-0" id="nav-tab" role="tablist">
+                      <a href="#" class="nav-link text-uppercase fs-6 active" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all">All</a>
+                      <a href="#" class="nav-link text-uppercase fs-6" id="nav-trauma-tab" data-bs-toggle="tab" data-bs-target="#nav-trauma">Trauma</a>
+                      <a href="#" class="nav-link text-uppercase fs-6" id="nav-spine-tab" data-bs-toggle="tab" data-bs-target="#nav-spine">Spine</a>
+                      <a href="#" class="nav-link text-uppercase fs-6" id="nav-joints-tab" data-bs-toggle="tab" data-bs-target="#nav-joints">Joints</a>
+                      <a href="#" class="nav-link text-uppercase fs-6" id="nav-cranio-tab" data-bs-toggle="tab" data-bs-target="#nav-cranio">Craniomaxillofacial</a>
+                      <a href="#" class="nav-link text-uppercase fs-6" id="nav-arthro-tab" data-bs-toggle="tab" data-bs-target="#nav-arthro">Arthroscopy</a>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+                  <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gy-4">
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Plates" /></a></figure><h3>Plates</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Nails" /></a></figure><h3>Nails</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Screws" /></a></figure><h3>Screws</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Pins" /></a></figure><h3>Pins</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Wires" /></a></figure><h3>Wires</h3></div></div>
+                    
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Screws" /></a></figure><h3>Screws</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Cages" /></a></figure><h3>Cages</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Rods" /></a></figure><h3>Rods</h3></div></div>
+
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Hip" /></a></figure><h3>Hip</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Radial Head" /></a></figure><h3>Radial Head</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Knee & Shoulder" /></a></figure><h3>Knee & Shoulder</h3></div></div>
+
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Screws" /></a></figure><h3>Screws</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Plates" /></a></figure><h3>Plates</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Mesh" /></a></figure><h3>Mesh</h3></div></div>
+
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="ACL Screw" /></a></figure><h3>ACL Screw</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Endo-button" /></a></figure><h3>Endo-button</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Anchors" /></a></figure><h3>Anchors</h3></div></div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-trauma" role="tabpanel" aria-labelledby="nav-trauma-tab">
+                  <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gy-4">
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Plates" /></a></figure><h3>Plates</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Nails" /></a></figure><h3>Nails</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Screws" /></a></figure><h3>Screws</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Pins" /></a></figure><h3>Pins</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Wires" /></a></figure><h3>Wires</h3></div></div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-spine" role="tabpanel" aria-labelledby="nav-spine-tab">
+                  <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gy-4">
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Screws" /></a></figure><h3>Screws</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Cages" /></a></figure><h3>Cages</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Rods" /></a></figure><h3>Rods</h3></div></div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-joints" role="tabpanel" aria-labelledby="nav-joints-tab">
+                  <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gy-4">
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Hip" /></a></figure><h3>Hip</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Radial Head" /></a></figure><h3>Radial Head</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Knee & Shoulder" /></a></figure><h3>Knee & Shoulder</h3></div></div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-cranio" role="tabpanel" aria-labelledby="nav-cranio-tab">
+                  <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gy-4">
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Screws" /></a></figure><h3>Screws</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Plates" /></a></figure><h3>Plates</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Mesh" /></a></figure><h3>Mesh</h3></div></div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-arthro" role="tabpanel" aria-labelledby="nav-arthro-tab">
+                  <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gy-4">
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="ACL Screw" /></a></figure><h3>ACL Screw</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Endo-button" /></a></figure><h3>Endo-button</h3></div></div>
+                    <div class="col"><div class="product-item"><figure><a href="product-detail.html"><img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="tab-image" alt="Anchors" /></a></figure><h3>Anchors</h3></div></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 about-images" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <img src="static/img/about-company-1.jpg" class="img-fluid" alt="" />
+              </div>
+              <div class="col-lg-6">
+                <div class="row gy-4">
+                  <div class="col-lg-12">
+                    <img src="static/img/about-company-2.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="static/img/about-company-3.jpg" class="img-fluid" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7 content" data-aos="fade-up" data-aos-delay="100">
+            <p class="sec-head-oste">Why Choose Us</p>
+            <h2 class="display-5 fw-bold text-oste">The Osteon Advantage</h2>
+            <h3 class="mb-3">Precision-Engineered Solutions for Better Outcomes</h3>
+            <p class="fst-italic text-muted mb-4">
+              We combine advanced manufacturing technology with deep clinical insights to deliver world-class orthopedic implants that surgeons trust and patients rely on for a seamless recovery.
+            </p>
+            <ul class="text-muted lh-lg">
+              <li class="d-flex align-items-start">
+                <i class="bi bi-check-circle-fill mt-1 me-2"></i>
+                <span><strong>Uncompromising Quality:</strong> Rigorous biomechanical testing and strict adherence to global regulatory standards and international ISO certifications.</span>
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-check-circle-fill mt-1 me-2"></i>
+                <span><strong>Advanced Infrastructure:</strong> State-of-the-art in-house CNC machining, 5-axis mill-turn centers, and sterile cleanroom packaging facilities.</span>
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-check-circle-fill mt-1 me-2"></i>
+                <span><strong>Comprehensive Portfolio:</strong> A massive catalog of trauma, spine, and joint solutions, alongside agile OEM & ODM manufacturing services.</span>
+              </li>
+            </ul>
+            <a href="about-us.html" class="read-more"><span>Discover Our Journey</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /About Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section" style="display: none">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <!-- <img src="static/img/clients/client-1.png" class="img-fluid" alt=""> -->
+            <img src="https://www.auxein.com/wp-content/uploads/2022/08/Knee-Elbow-150x150.png" class="img-fluid"
+              alt="" />
+          </div>
+          <!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="static/img/clients/client-2.png" class="img-fluid" alt="" />
+          </div>
+          <!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="static/img/clients/client-3.png" class="img-fluid" alt="" />
+          </div>
+          <!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="static/img/clients/client-4.png" class="img-fluid" alt="" />
+          </div>
+          <!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="static/img/clients/client-5.png" class="img-fluid" alt="" />
+          </div>
+          <!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="static/img/clients/client-6.png" class="img-fluid" alt="" />
+          </div>
+          <!-- End Client Item -->
+        </div>
+      </div>
+    </section>
+    <!-- /Clients Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>News & Events</h2>
+        <p>
+          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+          consectetur velit
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-5 d-flex align-items-center">
+            <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+                  <i class="bi bi-binoculars"></i>
+                  <div>
+                    <h4 class="d-none d-lg-block">
+                      Modi sit est dela pireda nest
+                    </h4>
+                    <p>
+                      Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+                  <i class="bi bi-box-seam"></i>
+                  <div>
+                    <h4 class="d-none d-lg-block">
+                      Unde praesenti mara setra le
+                    </h4>
+                    <p>
+                      Recusandae atque nihil. Delectus vitae non similique
+                      magnam molestiae sapiente similique tenetur aut
+                      voluptates sed voluptas ipsum voluptas
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+                  <i class="bi bi-brightness-high"></i>
+                  <div>
+                    <h4 class="d-none d-lg-block">
+                      Pariatur explica nitro dela
+                    </h4>
+                    <p>
+                      Excepteur sint occaecat cupidatat non proident, sunt in
+                      culpa qui officia deserunt mollit anim id est laborum
+                      Debitis nulla est maxime voluptas dolor aut
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!-- End Tab Nav -->
+          </div>
+
+          <div class="col-lg-6">
+            <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+              <div class="tab-pane fade active show" id="features-tab-1">
+                <img src="static/img/tabs-1.jpg" alt="" class="img-fluid" />
+              </div>
+              <!-- End Tab Content Item -->
+
+              <div class="tab-pane fade" id="features-tab-2">
+                <img src="static/img/tabs-2.jpg" alt="" class="img-fluid" />
+              </div>
+              <!-- End Tab Content Item -->
+
+              <div class="tab-pane fade" id="features-tab-3">
+                <img src="static/img/tabs-3.jpg" alt="" class="img-fluid" />
+              </div>
+              <!-- End Tab Content Item -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Features Section -->
+
+    <!-- Features Details Section -->
+    <section id="features-details" class="features-details section">
+      <div class="container">
+        <div class="row gy-4 justify-content-between features-item">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <img src="static/img/features-1.jpg" class="img-fluid" alt="" />
+          </div>
+
+          <div class="col-lg-5 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>Corporis temporibus maiores provident</h3>
+              <p>
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident.
+              </p>
+              <a href="#" class="btn more-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Features Item -->
+
+        <div class="row gy-4 justify-content-between features-item">
+          <div class="col-lg-5 d-flex align-items-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+            <div class="content">
+              <h3>Neque ipsum omnis sapiente quod quia dicta</h3>
+              <p>
+                Quidem qui dolore incidunt aut. In assumenda harum id iusto
+                lorena plasico mares
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-easel flex-shrink-0"></i> Et corporis ea
+                  eveniet ducimus.
+                </li>
+                <li>
+                  <i class="bi bi-patch-check flex-shrink-0"></i>
+                  Exercitationem dolorem sapiente.
+                </li>
+                <li>
+                  <i class="bi bi-brightness-high flex-shrink-0"></i> Veniam
+                  quia modi magnam.
+                </li>
+              </ul>
+              <p></p>
+              <a href="#" class="btn more-btn">Learn More</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+            <img src="static/img/features-2.jpg" class="img-fluid" alt="" />
+          </div>
+        </div>
+        <!-- Features Item -->
+      </div>
+    </section>
+    <!-- /Features Details Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>
+          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+          consectetur velit
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-cyan position-relative">
+              <i class="bi bi-activity icon"></i>
+              <div>
+                <h3>Nesciunt Mete</h3>
+                <p>
+                  Provident nihil minus qui consequatur non omnis maiores. Eos
+                  accusantium minus dolores iure perferendis tempore et
+                  consequatur.
+                </p>
+                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item item-orange position-relative">
+              <i class="bi bi-broadcast icon"></i>
+              <div>
+                <h3>Eosle Commodi</h3>
+                <p>
+                  Ut autem aut autem non a. Sint sint sit facilis nam iusto
+                  sint. Libero corrupti neque eum hic non ut nesciunt dolorem.
+                </p>
+                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item item-teal position-relative">
+              <i class="bi bi-easel icon"></i>
+              <div>
+                <h3>Ledo Markt</h3>
+                <p>
+                  Ut excepturi voluptatem nisi sed. Quidem fuga consequatur.
+                  Minus ea aut. Vel qui id voluptas adipisci eos earum
+                  corrupti.
+                </p>
+                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item item-red position-relative">
+              <i class="bi bi-bounding-box-circles icon"></i>
+              <div>
+                <h3>Asperiores Commodi</h3>
+                <p>
+                  Non et temporibus minus omnis sed dolor esse consequatur.
+                  Cupiditate sed error ea fuga sit provident adipisci neque.
+                </p>
+                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+        </div>
+      </div>
+    </section>
+    <!-- /Services Section -->
+
+    <!-- More Features Section -->
+    <section id="more-features" class="more-features section">
+      <div class="container">
+        <div class="row justify-content-around gy-4">
+          <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up"
+            data-aos-delay="100">
+            <h3>Enim quis est voluptatibus aliquid consequatur</h3>
+            <p>
+              Esse voluptas cumque vel exercitationem. Reiciendis est hic
+              accusamus. Non ipsam et sed minima temporibus laudantium. Soluta
+              voluptate sed facere corporis dolores excepturi
+            </p>
+
+            <div class="row">
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-easel flex-shrink-0"></i>
+                <div>
+                  <h4>Lorem Ipsum</h4>
+                  <p>
+                    Voluptatum deleniti atque corrupti quos dolores et quas
+                    molestias
+                  </p>
+                </div>
+              </div>
+              <!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-patch-check flex-shrink-0"></i>
+                <div>
+                  <h4>Nemo Enim</h4>
+                  <p>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui blanditiise
+                  </p>
+                </div>
+              </div>
+              <!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-brightness-high flex-shrink-0"></i>
+                <div>
+                  <h4>Dine Pad</h4>
+                  <p>
+                    Explicabo est voluptatum asperiores consequatur magnam. Et
+                    veritatis odit
+                  </p>
+                </div>
+              </div>
+              <!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-brightness-high flex-shrink-0"></i>
+                <div>
+                  <h4>Tride clov</h4>
+                  <p>
+                    Est voluptatem labore deleniti quis a delectus et. Saepe
+                    dolorem libero sit
+                  </p>
+                </div>
+              </div>
+              <!-- End Icon Box -->
+            </div>
+          </div>
+
+          <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+            <img src="static/img/features-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /More Features Section -->
+
+    <!-- Pricing Section (Hidden) -->
+    <section id="pricing" class="pricing section" style="display: none">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pricing</h2>
+        <p>
+          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+          consectetur velit
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-item">
+              <h3>Free Plan</h3>
+              <p class="description">
+                Ullam mollitia quasi nobis soluta in voluptatum et sint palora
+                dex strater
+              </p>
+              <h4><sup>$</sup>0<span> / month</span></h4>
+              <a href="#" class="cta-btn">Start a free trial</a>
+              <p class="text-center small">No credit card required</p>
+              <ul>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Quam adipiscing vitae proin</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Nec feugiat nisl pretium</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Nulla at volutpat diam uteera</span>
+                </li>
+                <li class="na">
+                  <i class="bi bi-x"></i>
+                  <span>Pharetra massa massa ultricies</span>
+                </li>
+                <li class="na">
+                  <i class="bi bi-x"></i>
+                  <span>Massa ultricies mi quis hendrerit</span>
+                </li>
+                <li class="na">
+                  <i class="bi bi-x"></i>
+                  <span>Voluptate id voluptas qui sed aperiam rerum</span>
+                </li>
+                <li class="na">
+                  <i class="bi bi-x"></i>
+                  <span>Iure nihil dolores recusandae odit voluptatibus</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Pricing Item -->
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-item featured">
+              <p class="popular">Popular</p>
+              <h3>Business Plan</h3>
+              <p class="description">
+                Ullam mollitia quasi nobis soluta in voluptatum et sint palora
+                dex strater
+              </p>
+              <h4><sup>$</sup>29<span> / month</span></h4>
+              <a href="#" class="cta-btn">Start a free trial</a>
+              <p class="text-center small">No credit card required</p>
+              <ul>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Quam adipiscing vitae proin</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Nec feugiat nisl pretium</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Nulla at volutpat diam uteera</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Pharetra massa massa ultricies</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Massa ultricies mi quis hendrerit</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Voluptate id voluptas qui sed aperiam rerum</span>
+                </li>
+                <li class="na">
+                  <i class="bi bi-x"></i>
+                  <span>Iure nihil dolores recusandae odit voluptatibus</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Pricing Item -->
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pricing-item">
+              <h3>Developer Plan</h3>
+              <p class="description">
+                Ullam mollitia quasi nobis soluta in voluptatum et sint palora
+                dex strater
+              </p>
+              <h4><sup>$</sup>49<span> / month</span></h4>
+              <a href="#" class="cta-btn">Start a free trial</a>
+              <p class="text-center small">No credit card required</p>
+              <ul>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Quam adipiscing vitae proin</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Nec feugiat nisl pretium</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Nulla at volutpat diam uteera</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Pharetra massa massa ultricies</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Massa ultricies mi quis hendrerit</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Voluptate id voluptas qui sed aperiam rerum</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Iure nihil dolores recusandae odit voluptatibus</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Pricing Item -->
+        </div>
+      </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing section">
+      <!-- Blog Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Blogs</h2>
+        <p>
+          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+          consectetur velit
+        </p>
+      </div>
+      <!-- End blog Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-sm-12">
+            <div class="card w-100">
+              <div class="img-hover-zoom">
+                <img src="static/img/features-3.jpg" class="card-img-top" alt="..." />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Blog title</h5>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  sapiente amet voluptatum? Ut distinctio natus.
+                </p>
+                <a href="#" class="btn btn-primary">Read Blog</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-12">
+            <div class="card w-100">
+              <div class="img-hover-zoom">
+                <img src="static/img/features-3.jpg" class="card-img-top" alt="..." />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Blog title</h5>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  sapiente amet voluptatum? Ut distinctio natus.
+                </p>
+                <a href="#" class="btn btn-primary">Read Blog</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-12">
+            <div class="card w-100">
+              <div class="img-hover-zoom">
+                <img src="static/img/features-3.jpg" class="card-img-top" alt="..." />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Blog title</h5>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  sapiente amet voluptatum? Ut distinctio natus.
+                </p>
+                <a href="#" class="btn btn-primary">Read Blog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faqs-section py-5 bg-white position-relative">
+      <div class="container py-5">
+        
+        <div class="text-center mb-5">
+          <span class="sec-head-oste">Got Questions?</span>
+          <h2 class="display-5 fw-bold text-oste">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion custom-accordion" id="faqAccordion">
+              
+              <div class="accordion-item border-0 mb-4 shadow-sm rounded-4 overflow-hidden">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button collapsed fw-bold px-4 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    What quality certifications do your products hold?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body px-4 pb-4 pt-0 text-muted lh-lg">
+                    All our products undergo strict quality control and comply with international health and safety regulations, ensuring they meet the highest medical and pharmaceutical standards.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-0 mb-4 shadow-sm rounded-4 overflow-hidden">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed fw-bold px-4 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How does Osteon Life Science ensure the efficacy of its products?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body px-4 pb-4 pt-0 text-muted lh-lg">
+                    We invest heavily in ongoing research and development, rigorous clinical testing, and sourcing premium raw materials so that every product delivers measurable, reliable results.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-0 mb-4 shadow-sm rounded-4 overflow-hidden">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed fw-bold px-4 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Do you supply to both healthcare facilities and individual consumers?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body px-4 pb-4 pt-0 text-muted lh-lg">
+                    Yes, we proudly partner with hospitals, clinics, and pharmacies for bulk supply, while also providing select product lines directly to consumers for continued care.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-0 mb-4 shadow-sm rounded-4 overflow-hidden">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed fw-bold px-4 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Are your implants supplied sterile or non-sterile?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body px-4 pb-4 pt-0 text-muted lh-lg">
+                    We offer both sterile and non-sterile product lines to meet the specific requirements of our clients. Our sterile products are processed and packaged in state-of-the-art cleanroom facilities to ensure maximum patient safety.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-0 mb-4 shadow-sm rounded-4 overflow-hidden">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed fw-bold px-4 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Do you export products internationally?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body px-4 pb-4 pt-0 text-muted lh-lg">
+                    Yes. While we are proudly "Made in India," our products are "Made for the World." We have a robust global distribution network and regularly export our orthopedic implants and instruments to international markets.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-0 mb-4 shadow-sm rounded-4 overflow-hidden">
+                <h2 class="accordion-header" id="headingSix">
+                  <button class="accordion-button collapsed fw-bold px-4 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    What is the typical lead time for custom OEM/ODM manufacturing?
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body px-4 pb-4 pt-0 text-muted lh-lg">
+                    Lead times vary depending on the complexity and volume of the order. However, our lean manufacturing processes and agile team allow us to adapt quickly and offer highly competitive timelines without compromising on quality.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-0 mb-4 shadow-sm rounded-4 overflow-hidden">
+                <h2 class="accordion-header" id="headingSeven">
+                  <button class="accordion-button collapsed fw-bold px-4 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    Are your manufacturing facilities ISO certified?
+                  </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body px-4 pb-4 pt-0 text-muted lh-lg">
+                    Absolutely. Our world-class manufacturing infrastructure strictly adheres to international regulatory guidelines for medical device manufacturing, ensuring consistent quality and compliance.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section (Hidden) -->
+    <section id="testimonials" class="testimonials section light-background" style="display: none">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>
+          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+          consectetur velit
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 40
+                  },
+                  "1200": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 1
+                  }
+                }
+              }
+            </script>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Proin iaculis purus consequat sem cure digni ssim donec
+                  porttitora entum suscipit rhoncus. Accusantium quam,
+                  ultricies eget id, aliquam eget nibh et. Maecen aliquam,
+                  risus at semper.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="static/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="" />
+                  <h3>Saul Goodman</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Export tempor illum tamen malis malis eram quae irure esse
+                  labore quem cillum quid cillum eram malis quorum velit fore
+                  eram velit sunt aliqua noster fugiat irure amet legam anim
+                  culpa.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="static/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="" />
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Enim nisi quem export duis labore cillum quae magna enim
+                  sint quorum nulla quem veniam duis minim tempor labore quem
+                  eram duis noster aute amet eram fore quis sint minim.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="static/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="" />
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa
+                  multos export minim fugiat minim velit minim dolor enim duis
+                  veniam ipsum anim magna sunt elit fore quem dolore labore
+                  illum veniam.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="static/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="" />
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure
+                  aliqua veniam tempor noster veniam enim culpa labore duis
+                  sunt culpa nulla illum cillum fugiat legam esse veniam culpa
+                  fore nisi cillum quid.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="static/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="" />
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>
+          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+          consectetur velit
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+              data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <p>
+                207 Sarthik II, Opp. Rajpath Club, S.G. Highway, Ahmedabad
+                -380054 Gujarat India
+              </p>
+            </div>
+          </div>
+          <!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+              data-aos-delay="300">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p>+91 000 000 0000</p>
+            </div>
+          </div>
+          <!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+              data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>info@osteonlife.com</p>
+            </div>
+          </div>
+          <!-- End Info Item -->
+        </div>
+
+        <div class="row gy-4 mt-1">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.263285712573!2d72.45091027476776!3d22.940528819385932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e911724c19011%3A0x2a7435c0da8b4dab!2sOsteon%20Life%20Science%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1734925254234!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+          </div>
+          <!-- End Google Maps -->
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="400">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="" />
+                </div>
+
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="" />
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="" />
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Your message has been sent. Thank you!
+                  </div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- End Contact Form -->
+        </div>
+      </div>
+    </section>
+    <!-- /Contact Section -->
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Osteon Life Science</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>207 Sarthik II, Opp. Rajpath Club, S.G. Highway,</p>
+            <p>Ahmedabad -380054 Gujarat India</p>
+            <p class="mt-3">
+              <strong>Phone:</strong> <span>+91 000 000 0000</span>
+            </p>
+            <p><strong>Email:</strong> <span>info@osteonlife.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Products</h4>
+          <ul>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Product</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>
+            Subscribe to our newsletter and receive the latest news about our
+            products and services!
+          </p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form">
+              <input type="email" name="email" placeholder="Enter Email" /><input type="submit" value="Subscribe" />
+            </div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">
+              Your subscription request has been sent. Thank you!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>
+        © <span>Copyright</span>
+        <strong class="px-1 sitename">Osteon Life Science</strong><span>All Rights Reserved</span>
+      </p>
+      <!-- <div class="credits"> -->
+      <p>
+        Designed by
+        <a href="https://www.dynamiclabz.net/"><b>Dynamic Labz</b></a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- External JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="static/js/main.js"></script>
+  <script src="static/js/php-email-form.js"></script>
+
+  <script>
+    document.getElementById("megamenu").click();
+  </script>
+</body>
+
+</html>

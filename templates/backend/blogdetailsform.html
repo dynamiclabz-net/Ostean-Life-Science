@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Blog Post</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-secondary-subtle">
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h1 class="mb-4 text-center">Create a New Blog Post</h1>
+          <a href="/blog/editblog/" class="btn btn-primary">Edit Blogs</a>
+
+          <form
+            method="POST"
+            enctype="multipart/form-data"
+            action="{% url 'postsform-list' %}"
+          >
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="category" class="form-label">Category</label>
+              <div class="d-flex">
+                <select
+                  class="form-control me-2"
+                  id="category"
+                  name="category"
+                  onchange="handleCategoryChange(this)"
+                >
+                  <option value="" selected disabled>Select Category</option>
+                  {% for category in categories %}
+                  <option id="options" value="{{ category }}" {% if category == blog.category %}selected{% endif %}>
+                    {{ category }}
+                  </option>
+                  {% endfor %}
+                  <option  value="new">+ Add New Category</option>
+                </select>
+              </div>
+              <div id="new-category-container" style="display: none;" class="mt-2">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="new-category"
+                  name="new-category"
+                  placeholder="Enter new category name"
+                  required
+                />
+              </div>
+              {% comment %} {% if errors.category %}
+              <div class="form-text text-danger">{{ errors.category }}</div>
+              {% endif %} {% endcomment %}
+            </div>
+            
+            <!-- Title -->
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                name="title"
+                value="{{ blog.title }}"
+                required
+              />
+              {% comment %} {% if errors.title %}
+              <div class="form-text text-danger">{{ errors.title }}</div>
+              {% endif %} {% endcomment %}
+            </div>
+
+            <!-- Content -->
+            <div class="mb-3">
+              <label for="content" class="form-label">Main Content</label>
+              <textarea
+                class="form-control"
+                id="content"
+                name="content"
+                rows="6"
+                placeholder="Write the main blog content"
+                required
+              ></textarea>
+              {% comment %} {% if errors.content %}
+              <div class="form-text text-danger">{{ errors.content }}</div>
+              {% endif %} {% endcomment %}
+            </div>
+
+            <!-- Quote -->
+            <div class="mb-3">
+              <label for="quote" class="form-label">Quote</label>
+              <textarea
+                class="form-control"
+                id="quote"
+                name="quote"
+                rows="3"
+                placeholder="Add an optional quote"
+                required
+              ></textarea>
+              {% comment %} {% if errors.quote %}
+              <div class="form-text text-danger">{{ errors.quote }}</div>
+              {% endif %} {% endcomment %}
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-3">
+              <label for="featured_image" class="form-label"
+                >Featured Image</label
+              >
+              <input
+                type="file"
+                class="form-control"
+                id="featured_image"
+                name="featured_image"
+                required
+                accept=".jpeg, .jpg, .png"
+                onchange="validatelandscapeImage()"
+                
+              />
+              {% comment %} {% if errors.featured_image %}
+              <div class="form-text text-danger">
+                {{ errors.featured_image }}
+              </div>
+              {% endif %} {% endcomment %}
+            </div>
+
+            <!-- Content Section 2 -->
+            <h4 class="mt-4">Content Section 2</h4>
+            <div class="mb-3">
+              <label for="content_2" class="form-label">Content</label>
+              <textarea
+                class="form-control"
+                id="content_2"
+                name="content_2"
+                rows="4"
+                placeholder="Write the second content section"
+              ></textarea>
+              {% comment %} {% if errors.content_2 %}
+              <div class="form-text text-danger">{{ errors.content_2 }}</div>
+              {% endif %} {% endcomment %}
+            </div>
+            <div class="mb-3">
+              <label for="image_1" class="form-label">Image 1</label>
+              <input
+                type="file"
+                class="form-control validate-image"
+                id="image_1"
+                name="image_1"
+              />
+              {% comment %} {% if errors.image_1 %}
+              <div class="form-text text-danger">{{ errors.image_1 }}</div>
+              {% endif %} {% endcomment %}
+            </div>
+            <div class="mb-3">
+              <label for="image_2" class="form-label">Image 2</label>
+              <input
+                type="file"
+                class="form-control validate-image"
+                id="image_2"
+                name="image_2"
+              />
+              {% comment %} {% if errors.image_2 %}
+              <div class="form-text text-danger">{{ errors.image_2 }}</div>
+              {% endif %} {% endcomment %}
+            </div>
+            <div class="mb-3">
+              <label for="image_3" class="form-label">Image 3</label>
+              <input
+                type="file"
+                class="form-control validate-image"
+                id="image_3"
+                name="image_3"
+              />
+              {% comment %} {% if errors.image_3 %}
+              <div class="form-text text-danger">{{ errors.image_3 }}</div>
+              {% endif %} {% endcomment %}
+            </div>
+            {% comment %}
+            <div class="mb-3">
+              <label for="content_2_quote" class="form-label">Quote</label>
+              <textarea
+                class="form-control"
+                id="content_2_quote"
+                name="content_2_quote"
+                rows="3"
+                placeholder="Add an optional quote for content section 2"
+              ></textarea>
+              {% if errors.content_2 %}
+              <div class="form-text text-danger">{{ errors.content_2 }}</div>
+              {% endif %}
+            </div>
+            {% endcomment %}
+
+            <!-- Information Section -->
+            <h4 class="mt-4">Information Section</h4>
+            <div class="mb-3">
+              <label for="info_content" class="form-label">Content</label>
+              <textarea
+                class="form-control "
+                id="info_content"
+                name="info_content"
+                rows="4"
+                placeholder="Write the information content"
+                required
+              ></textarea>
+              {% comment %} {% if errors.info_content %}
+              <div class="form-text text-danger">{{ errors.info_content }}</div>
+              {% endif %} {% endcomment %}
+            </div>
+            <div class="mb-3">
+              <label for="info_image" class="form-label">Image</label>
+              <input
+                type="file"
+                class="form-control validate-image"
+                id="info_image"
+                name="info_image"
+                required
+              />
+              {% comment %} {% if errors.info_image %}
+              <div class="form-text text-danger">{{ errors.info_image }}</div>
+              {% endif %} {% endcomment %}
+            </div>
+            <div class="mb-3">
+              <label for="info_quote" class="form-label">Quote</label>
+              <textarea
+                class="form-control"
+                id="info_quote"
+                name="info_quote"
+                rows="3"
+                placeholder="Add an optional quote for information section"
+                required
+              ></textarea>
+              {% comment %} {% if errors.info_quote %}
+              <div class="form-text text-danger">{{ errors.info_quote }}</div>
+              {% endif %} {% endcomment %}
+            </div>
+
+            <!-- Information Section 2 -->
+            <h4 class="mt-4">Information Section 2</h4>
+            <div class="mb-3">
+              <label for="info_content2" class="form-label">Content</label>
+              <textarea
+                class="form-control"
+                id="info_content2"
+                name="info_content2"
+                rows="4"
+                placeholder="Write the second information content"
+              
+              ></textarea>
+              {% comment %} {% if errors.info_content2 %}
+              <div class="form-text text-danger">
+                {{ errors.info_content2 }}
+              </div>
+              {% endif %} {% endcomment %}
+            </div>
+            <div class="mb-3">
+              <label for="info_image2" class="form-label">Image</label>
+              <input
+                type="file"
+                class="form-control validate-image"
+                id="info_image2"
+                name="info_image2"
+              
+              />
+              {% if errors.info_image2 %}
+              <div class="form-text text-danger">{{ errors.info_image2 }}</div>
+              {% endif %} 
+            </div>
+            <div class="mb-3">
+              <label for="info_quote2" class="form-label">Quote</label>
+              <textarea
+                class="form-control"
+                id="info_quote2"
+                name="info_quote2"
+                rows="3"
+                placeholder="Add an optional quote for information section 2"
+
+              ></textarea>
+              {% comment %} {% if errors.info_quote2 %}
+              <div class="form-text text-danger">{{ errors.info_quote2 }}</div>
+              {% endif %} {% endcomment %}
+            </div>
+
+            <!-- 5 Points Section -->
+            <h4 class="mt-4">5 Points Section</h4>
+
+            <div class="mb-3">
+              <label for="point_1_image" class="form-label"
+                >Point 1 Image</label
+              >
+              <input
+                type="file"
+                class="form-control validate-image"
+                id="point_1_image"
+                name="point_1_image"
+                required
+              />
+              {% comment %} {% if errors.point_1_image %}
+              <div class="form-text text-danger">
+                {{ errors.point_1_image }}
+              </div>
+              {% endif %} {% endcomment %}
+            </div>
+            <div class="mb-3">
+              <label for="point_1_quote" class="form-label"
+                >Point 1 Quote</label
+              >
+              <textarea
+                class="form-control"
+                id="point_1_quote"
+                name="point_1_quote"
+                rows="3"
+                placeholder="Add a quote for point 1"
+                required
+              ></textarea>
+              {% comment %} {% if errors.point_1_quote %}
+              <div class="form-text text-danger">
+                {{ errors.point_1_quote }}
+              </div>
+              {% endif %} {% endcomment %}
+            </div>
+            <div class="mb-3">
+              <label for="point_1_description" class="form-label"
+                >Point 1 Description</label
+              >
+              <textarea
+                class="form-control"
+                id="point_1_description"
+                name="point_1_description"
+                rows="4"
+                placeholder="Add a description for point 1"
+                required
+              ></textarea>
+              {% comment %} {% if errors.point_1_description %}
+              <div class="form-text text-danger">
+                {{ errors.point_1_description }}
+              </div>
+              {% endif %} {% endcomment %}
+            </div>
+
+            <div class="mb-3">
+              <label for="point_2_image" class="form-label"
+                >Point 2 Image</label
+              >
+              <input
+                type="file"
+                class="form-control validate-image"
+                id="point_2_image"
+                name="point_2_image"
+              />
+              {% comment %} {% if errors.point_2_image %}
+              <div class="form-text text-danger">
+                {{ errors.point_2_image }}
+              </div>
+              {% endif %} {% endcomment %}
+            </div>
+            <div class="mb-3">
+              <label for="point_2_quote" class="form-label"
+                >Point 2 Quote</label
+              >
+              <textarea
+                class="form-control"
+                id="point_2_quote"
+                name="point_2_quote"
+                rows="3"
+                placeholder="Add a quote for point 2"
+              ></textarea>
+              {% comment %} {% if errors.point_2_quote %}
+              <div class="form-text text-danger">
+                {{ errors.point_2_quote }}
+              </div>
+              {% endif %} {% endcomment %}
+            </div>
+            <div class="mb-3">
+              <label for="point_2_description" class="form-label"
+                >Point 2 Description</label
+              >
+              <textarea
+                class="form-control"
+                id="point_2_description"
+                name="point_2_description"
+                rows="4"
+                placeholder="Add a description for point 2"
+              ></textarea>
+              {% comment %} {% if errors.point_2_description %}
+              <div class="form-text text-danger">
+                {{ errors.point_2_description }}
+              </div>
+              {% endif %} {% endcomment %}
+            </div>
+
+            <div class="mb-3">
+              <label for="point_3_image" class="form-label"
+                >Point 3 Image</label
+              >
+              <input
+                type="file"
+                class="form-control validate-image"
+                id="point_3_image"
+                name="point_3_image"
+              />
+              {% if errors.point_3_image %}
+              <div class="form-text text-danger">
+                {{ errors.point_3_image }}
+              </div>
+              {% endif %}
+            </div>
+            <div class="mb-3">
+              <label for="point_3_quote" class="form-label"
+                >Point 3 Quote</label
+              >
+              <textarea
+                class="form-control"
+                id="point_3_quote"
+                name="point_3_quote"
+                rows="3"
+                placeholder="Add a quote for point 3"
+              ></textarea>
+              {% comment %} {% if errors.point_3_quote %}
+              <div class="form-text text-danger">
+                {{ errors.point_3_quote }}
+              </div>
+              {% endif %} {% endcomment %}
+            </div>
+            <div class="mb-3">
+              <label for="point_3_description" class="form-label"
+                >Point 3 Description</label
+              >
+              <textarea
+                class="form-control"
+                id="point_3_description"
+                name="point_3_description"
+                rows="4"
+                placeholder="Add a description for point 1"
+              ></textarea>
+              {% comment %} {% if errors.point_3_description %}
+              <div class="form-text text-danger">
+                {{ errors.point_3_description }}
+              </div>
+              {% endif %} {% endcomment %}
+            </div>
+
+            <div class="mb-3">
+              <label for="point_4_image" class="form-label"
+                >Point 4 Image</label
+              >
+              <input
+                type="file"
+                class="form-control validate-image"
+                id="point_4_image"
+                name="point_4_image"
+              />
+              {% comment %} {% if errors.point_4_image %}
+              <div class="form-text text-danger">
+                {{ errors.point_4_image }}
+              </div>
+              {% endif %} {% endcomment %}
+            </div>
+            <div class="mb-3">
+              <label for="point_4_quote" class="form-label"
+                >Point 4 Quote</label
+              >
+              <textarea
+                class="form-control"
+                id="point_4_quote"
+                name="point_4_quote"
+                rows="3"
+                placeholder="Add a quote for point 4"
+              ></textarea>
+              {% comment %} {% if errors.point_4_quote %}
+              <div class="form-text text-danger">
+                {{ errors.point_4_quote }}
+              </div>
+              {% endif %} {% endcomment %}
+            </div>
+            <div class="mb-3">
+              <label for="point_4_description" class="form-label"
+                >Point 4 Description</label
+              >
+              <textarea
+                class="form-control"
+                id="point_4_description"
+                name="point_4_description"
+                rows="4"
+                placeholder="Add a description for point 4"
+              ></textarea>
+              {% comment %} {% if errors.point_4_description %}
+              <div class="form-text text-danger">
+                {{ errors.point_4_description }}
+              </div>
+              {% endif %} {% endcomment %}
+            </div>
+
+            <!-- Tags -->
+            <div class="mb-3">
+              <label for="tags" class="form-label">Tags</label>
+              <input
+                type="text"
+                class="form-control"
+                id="tags"
+                name="tags"
+                value="{{ blog.tags.all|join:', ' }}"
+              />
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-lg">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      function handleCategoryChange(select) {
+        const newCategoryContainer = document.getElementById('new-category-container');
+        const newCategoryInput = document.getElementById('new-category');
+       
+        if (select.value === 'new') {
+          // Show the new category input if "Add New Category" is selected
+          newCategoryContainer.style.display = "block";
+          newCategoryInput.value = ""; 
+          newCategoryInput.focus(); 
+        } else {
+          // Hide the new category input for other selections or clicks
+          newCategoryContainer.style.display = "none";
+          newCategoryInput.value = ""; // Clear the input field
+          
+        }
+      
+      }
+
+      
+      
+
+      function validatelandscapeImage() {
+        const fileInput = document.getElementById("featured_image");
+        const file = fileInput.files[0];
+    
+        if (file) {
+          
+          const validTypes = ["image/jpeg", "image/png"];
+          if (!validTypes.includes(file.type)) {
+            alert("Only JPEG or PNG files are allowed.");
+            fileInput.value = ""; // Reset the file input
+            return;
+          }
+    
+          // Create an image object to check dimensions
+          const img = new Image();
+          img.src = URL.createObjectURL(file);
+    
+          img.onload = function () {
+            const width = img.naturalWidth;
+            const height = img.naturalHeight;
+            const aspectRatio = width / height;
+
+            // Round aspect ratio to 1.77 if within the range 1.75 - 1.79
+            let roundedAspectRatio = aspectRatio;
+            if (aspectRatio >= 1.75 && aspectRatio <= 1.79) {
+              roundedAspectRatio = 1.77;
+            }
+    
+            // Check if the rounded aspect ratio is exactly 1.77
+            if (roundedAspectRatio !== 1.77) {
+              alert("The image must have a 16:9 aspect ratio.");
+              fileInput.value = ""; // Reset the file input
+            }
+    
+            // Clean up object URL after validation
+            URL.revokeObjectURL(img.src);
+          };
+    
+          img.onerror = function () {
+            alert("Could not load the image. Please try again.");
+            fileInput.value = ""; // Reset the file input
+          };
+        }
+      }
+
+
+      function validateImage(inputElement) {
+        const file = inputElement.files[0];
+      
+        if (file) {
+          // Check file type
+          const validTypes = ["image/jpeg", "image/png"];
+          if (!validTypes.includes(file.type)) {
+            alert("Only JPEG or PNG files are allowed.");
+            inputElement.value = ""; // Reset the file input
+            return;
+          }
+      
+          // Create an image object to check dimensions
+          const img = new Image();
+          img.src = URL.createObjectURL(file);
+      
+          img.onload = function () {
+            const width = img.naturalWidth;
+            const height = img.naturalHeight;
+            const aspectRatio = width / height;
+      
+            // Check if the aspect ratio is 1:1 (square)
+            if (aspectRatio !== 1) {
+              alert("The image must have a 1:1 aspect ratio (square).");
+              inputElement.value = ""; // Reset the file input
+            }
+      
+            // Clean up object URL after validation
+            URL.revokeObjectURL(img.src);
+          };
+      
+          img.onerror = function () {
+            alert("Could not load the image. Please try again.");
+            inputElement.value = ""; // Reset the file input
+          };
+        }
+      }
+      
+      // Attach validation to all image inputs with the 'validate-image' class
+      document.addEventListener("DOMContentLoaded", () => {
+        const imageInputs = document.querySelectorAll(".validate-image");
+      
+        imageInputs.forEach((input) => {
+          input.addEventListener("change", () => validateImage(input));
+        });
+      });
+      
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

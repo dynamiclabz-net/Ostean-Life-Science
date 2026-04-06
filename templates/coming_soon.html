@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://mdbootstrap.com/img/new/slides/205.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        .navbar {
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .coming-soon {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 600px;
+        }
+        .btn-custom {
+            background-color: #761fe3;
+            color: #fff;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #5e14b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <nav class="navbar navbar-dark bg-transparent w-100 text-center">
+        <div class="container-fluid justify-content-center">
+            <span class="navbar-brand mb-0 h1" style="font-size: 30px;">Ostean Life Science</span>
+        </div>
+    </nav>
+
+    <div class="coming-soon d-flex flex-column align-items-center justify-content-center">
+        <h1 class="display-5">We're Coming Soon!</h1>
+        <p class="lead">Our website is under construction. Stay tuned for something amazing!</p>
+        <form class="row g-2 justify-content-center">
+            <div class="col-auto">
+                <input type="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-custom">Notify Me</button>
+            </div>
+        </form>
+        <p class="mt-3 text-muted">Thank you for your patience!</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
