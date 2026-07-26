@@ -246,11 +246,16 @@
       <div class="hero-bg">
         <img src="static/img/hero-bg-light.webp" alt="Background Image" />
       </div>
-      <div class="container text-center">
+      <div class="container text-center p-0" style="max-width: 100%;">
         <div class="swiper hero-carousel">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="row banner-content p-3 text-md-start">
+            <!-- VIDEO SLIDE - First Slide -->
+            <div class="swiper-slide video-slide">
+              <video class="hero-video" autoplay muted loop playsinline>
+                <source src="static/img/19538560-uhd_3840_2160_24fps.mp4" type="video/mp4" />
+              </video>
+              <div class="video-overlay"></div>
+              <div class="row banner-content p-5 text-md-start">
                 <div class="content-wrapper col-md-7 d-flex flex-column justify-content-center">
                   <div class="categories my-3 text-oste fw-bold">Premium Orthopedic Solutions</div>
                   <h3 class="display-4 hero-heading fw-bold">
@@ -260,7 +265,7 @@
                     Delivering precision-engineered trauma, spine, and joint implants trusted by surgeons worldwide for
                     superior clinical outcomes.
                   </p>
-                  <div class="row mt-2">
+                  <!-- <div class="row mt-2">
                     <div class="col-12 col-md-6">
                       <a href="product-detail.html"
                         class="w-100 btn btn-oste-outline btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Explore
@@ -270,16 +275,15 @@
                       <a href="#contact"
                         class="w-100 btn btn-oste btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Contact Us</a>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
-                <div class="img-wrapper col-md-5 text-end">
-                  <img src="static/img/main_banner_product.png" class="img-fluid" alt="Orthopedic Implants" />
-                </div>
+                <div class="img-wrapper col-md-5 text-end d-none d-md-block"></div>
               </div>
             </div>
 
+            <!-- SLIDE 2 -->
             <div class="swiper-slide">
-              <div class="row banner-content p-3 text-md-start flex-md-row-reverse">
+              <div class="row banner-content p-5 text-md-start flex-md-row-reverse">
                 <div class="content-wrapper col-md-7 d-flex flex-column justify-content-center">
                   <div class="categories my-3 text-oste fw-bold">Global Manufacturing Excellence</div>
                   <h3 class="display-4 hero-heading fw-bold">
@@ -301,14 +305,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="img-wrapper col-md-5 text-end">
+                <div class="img-wrapper col-md-5 text-center">
                   <img src="static/img/main_banner_product.png" class="img-fluid" alt="OEM Manufacturing" />
                 </div>
               </div>
             </div>
 
+            <!-- SLIDE 3 -->
             <div class="swiper-slide">
-              <div class="row banner-content p-3 text-md-start">
+              <div class="row banner-content p-5 text-md-start">
                 <div class="content-wrapper col-md-7 d-flex flex-column justify-content-center">
                   <div class="categories my-3 text-oste fw-bold">ISO 13485 Certified</div>
                   <h3 class="display-4 hero-heading fw-bold">
@@ -331,7 +336,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="img-wrapper col-md-5 text-end">
+                <div class="img-wrapper col-md-5 text-center">
                   <img src="static/img/main_banner_product.png" class="img-fluid" alt="Global Reach" />
                 </div>
               </div>
@@ -345,7 +350,7 @@
         </div>
       </div>
     </section>
-
+    
     <!-- About Us Section -->
     <section class="py-5">
       <div class="container">
@@ -396,7 +401,7 @@
             <div class="row gx-2 gx-lg-3">
               <!-- <div class="col-6"> -->
               <div class="mb-2">
-                <img class="img-fluid rounded-3" src="static/img/about-company-3.jpg" />
+                <img class="img-fluid rounded-3" src="static/img/ABOUT US.png" />
               </div>
               <!-- </div> -->
               <!-- <div class="col-6">
@@ -770,23 +775,9 @@
     <!-- Why Choose Us Section -->
     <section id="about" class="about section">
       <div class="container">
-        <div class="row gy-4">
+        <div class="row gy-4 align-items-center">
           <div class="col-lg-5 about-images" data-aos="fade-up" data-aos-delay="200">
-            <div class="row gy-4">
-              <div class="col-lg-6">
-                <img src="static/img/about-company-1.jpg" class="img-fluid" alt="" />
-              </div>
-              <div class="col-lg-6">
-                <div class="row gy-4">
-                  <div class="col-lg-12">
-                    <img src="static/img/about-company-2.jpg" class="img-fluid" alt="" />
-                  </div>
-                  <div class="col-lg-12">
-                    <img src="static/img/about-company-3.jpg" class="img-fluid" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
+              <img src="static/img/Why choose us.png" class="img-fluid" alt="" />            
           </div>
 
           <div class="col-lg-7 content" data-aos="fade-up" data-aos-delay="100">
@@ -862,7 +853,7 @@
     <!-- /Clients Section -->
 
     <!-- News & Events Section -->
-    <section id="news-events" class="news-section py-5 bg-light">
+    <section id="news-events" class="news-section py-5 bg-light" style="display: none">
       <div class="container py-4">
         
         <div class="text-center mb-5" data-aos="fade-up">
@@ -942,7 +933,7 @@
         
         <div class="row gy-4 justify-content-between features-item mb-5">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <img src="static/img/features-1.jpg" class="img-fluid rounded-4 shadow-sm" alt="Precision Orthopedic Implants" />
+            <img src="static/img/why_coose_us_3.webp" class="img-fluid rounded-4 shadow-sm" alt="Precision Orthopedic Implants" />
           </div>
 
           <div class="col-lg-5 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
@@ -986,7 +977,7 @@
           </div>
 
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
-            <img src="static/img/features-2.jpg" class="img-fluid rounded-4 shadow-sm" alt="Global Manufacturing" />
+            <img src="static/img/why_coose_us_1.webp" class="img-fluid rounded-4 shadow-sm" alt="Global Manufacturing" />
           </div>
         </div>
         </div>
@@ -1222,7 +1213,7 @@
     </section>
 
     <!-- Blogs Section -->
-    <section id="blogs" class="blogs-section py-5 bg-white">
+    <section id="blogs" class="blogs-section py-5 bg-white" style="display: none">
       <div class="container py-4">
         
         <div class="text-center mb-5" data-aos="fade-up">

@@ -1170,21 +1170,232 @@ section,
   color: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
-@media (max-width: 640px) {
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+/* VIDEO SLIDE STYLES */
+.swiper-slide.video-slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.swiper-slide.video-slide .banner-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px !important;
+}
+
+.swiper-slide.video-slide .content-wrapper {
+  color: white;
+  width: 100%;
+}
+
+.swiper-slide.video-slide .categories,
+.swiper-slide.video-slide .hero-heading,
+.swiper-slide.video-slide .lead {
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.swiper-slide.video-slide .lead {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.swiper-slide.video-slide .row.mt-2 {
+  display: grid;
+  gap: 12px;
+}
+
+.swiper-slide.video-slide .btn {
+  font-size: 14px !important;
+  padding: 12px 24px !important;
+}
+
+/* TABLET - Medium Screens */
+@media (max-width: 992px) {
+  .swiper-slide.video-slide {
+    height: 90vh;
   }
 
-  .hero p {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
+  .swiper-slide.video-slide .display-4 {
+    font-size: 2.5rem !important;
   }
 
-  .hero .btn-get-started,
-  .hero .btn-watch-video {
+  .swiper-slide.video-slide .lead {
+    font-size: 16px;
+  }
+
+  .swiper-slide.video-slide .banner-content {
+    padding: 50px 15px !important;
+  }
+}
+
+/* MOBILE - Small Screens */
+@media (max-width: 768px) {
+  .swiper-slide.video-slide {
+    height: auto;
+    min-height: 80vh;
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video-overlay {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .swiper-slide.video-slide .banner-content {
+    padding: 40px 15px !important;
+    min-height: 70vh;
+    flex-direction: column;
+  }
+
+  .swiper-slide.video-slide .content-wrapper {
+    text-align: center;
+    width: 100%;
+  }
+
+  .swiper-slide.video-slide .display-4 {
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 15px;
+  }
+
+  .swiper-slide.video-slide .categories {
+    font-size: 12px;
+  }
+
+  .swiper-slide.video-slide .lead {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .swiper-slide.video-slide .row.mt-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .swiper-slide.video-slide .col-12 {
+    width: 100%;
+  }
+
+  .swiper-slide.video-slide .btn {
+    width: 100% !important;
+    font-size: 12px !important;
+    padding: 10px 16px !important;
+  }
+
+  .swiper-slide.video-slide .img-wrapper {
+    display: none !important;
+  }
+}
+
+/* EXTRA SMALL - Mobile Phones */
+@media (max-width: 576px) {
+  .swiper-slide.video-slide {
+    min-height: 75vh;
+    padding-top: 30px;
+  }
+
+  .hero-video {
+    object-fit: cover;
+  }
+
+  .video-overlay {
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  .swiper-slide.video-slide .banner-content {
+    padding: 30px 12px !important;
+    min-height: 65vh;
+  }
+
+  .swiper-slide.video-slide .display-4 {
+    font-size: 1.35rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 10px;
+  }
+
+  .swiper-slide.video-slide .categories {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .swiper-slide.video-slide .lead {
     font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  .swiper-slide.video-slide .row.mt-2 {
+    gap: 8px;
+  }
+
+  .swiper-slide.video-slide .btn {
+    font-size: 11px !important;
+    padding: 8px 12px !important;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+/* Extra Small - Very Small Phones */
+@media (max-width: 480px) {
+  .swiper-slide.video-slide {
+    min-height: 70vh;
+  }
+
+  .swiper-slide.video-slide .banner-content {
+    padding: 25px 10px !important;
+    min-height: 60vh;
+  }
+
+  .swiper-slide.video-slide .display-4 {
+    font-size: 1.25rem !important;
+  }
+
+  .swiper-slide.video-slide .lead {
+    font-size: 12px;
   }
 }
 
