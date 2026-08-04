@@ -2476,6 +2476,133 @@ section,
     z-index: 0;
 }
 
+/* .img-wrapper{
+    display:none;
+} */
+
+
+/* IMAGE SLIDES */
+
+.swiper-slide.image-slide{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+}
+
+.image-slide .slide-bg{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    z-index:0;
+}
+
+.image-slide .image-overlay{
+    position:absolute;
+    inset:0;
+    /* background:rgba(0,0,0,.45); */
+    z-index:1;
+}
+
+.image-slide .banner-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    padding:60px !important;
+}
+
+.image-slide .content-wrapper{
+    color:#fff;
+}
+
+.image-slide .categories,
+.image-slide .hero-heading,
+.image-slide .lead{
+    /* color:#fff; */
+    color:#000000;
+    /* text-shadow:0 3px 12px rgba(0,0,0,.45); */
+}
+
+.image-slide .lead{
+    color:rgba(0, 0, 0, 0.95);
+    max-width:650px;
+}
+
+@media (max-width:768px) {
+
+    .image-slide {
+        height: 75vh;
+        min-height: 550px;
+    }
+
+    .image-slide .slide-bg {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 70% center; /* Change to 60%, 80%, right center if needed */
+    }
+
+    .image-slide .image-overlay {
+        /* background: rgba(0, 0, 0, .45); */
+    }
+
+    .image-slide .banner-content {
+        height: 100%;
+        min-height: unset;
+        padding: 40px 20px !important;
+        display: flex;
+        align-items: center;
+    }
+
+    .image-slide .content-wrapper {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .image-slide .categories {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .image-slide .display-4 {
+        font-size: 2rem !important;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .image-slide .lead {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .image-slide .row.mt-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .image-slide .col-md-6 {
+        width: 100%;
+    }
+
+    .image-slide .btn {
+        width: 100%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        transform: scale(.75);
+    }
+}
 .leadership-card:hover .img-backdrop {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.05);
