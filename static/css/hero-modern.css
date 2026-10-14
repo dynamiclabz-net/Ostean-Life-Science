@@ -1,0 +1,468 @@
+/* Modern hero carousel (index page). All selectors are new (hx-*) so shared classes stay untouched. */
+
+.hx-hero {
+  --hx-ink: #0b2236;
+  --hx-ink-soft: #3b4f61;
+  --hx-brand: #106ba7;
+  --hx-brand-bright: #2f95d6;
+  --hx-surface: #f4f6f8;
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 640px;
+  max-height: 1080px;
+  padding: 0;
+  overflow: hidden;
+  display: block;
+  background: var(--hx-surface);
+}
+
+.hx-hero .hx-carousel,
+.hx-hero .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.hx-slide {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background: var(--hx-surface);
+  text-align: left;
+}
+
+/* Background layers */
+.hx-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: 70% center;
+  background-repeat: no-repeat;
+  transform: scale(1.08);
+  transform-origin: 70% 50%;
+  z-index: 0;
+}
+
+.swiper-slide-active .hx-bg {
+  animation: hx-zoom 9s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.hx-bg-left {
+  background-position: 30% center;
+  transform-origin: 30% 50%;
+}
+
+.hx-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(244, 246, 248, 0.92) 0%, rgba(244, 246, 248, 0.7) 32%, rgba(244, 246, 248, 0) 62%);
+}
+
+.hx-scrim-dark {
+  background:
+    linear-gradient(90deg, rgba(7, 22, 38, 0.88) 0%, rgba(7, 22, 38, 0.55) 45%, rgba(7, 22, 38, 0.15) 100%),
+    linear-gradient(0deg, rgba(7, 22, 38, 0.55) 0%, rgba(7, 22, 38, 0) 40%);
+}
+
+/* Video slide */
+.hx-slide-video {
+  background: linear-gradient(135deg, #0b2236 0%, #0f3a5c 60%, #106ba7 100%);
+}
+
+.hx-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Content */
+.hx-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  /* max-width: 1320px; */
+  margin: 0 auto;
+  padding: 96px 24px 120px;
+}
+
+.hx-inner-end {
+  justify-content: flex-end;
+}
+
+.hx-copy {
+  max-width: 640px;
+  color: var(--hx-ink);
+}
+
+.hx-copy-glass {
+  max-width: 640px;
+  padding: 40px 40px 36px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 30px 80px -30px rgba(11, 34, 54, 0.35);
+}
+
+.hx-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  margin-bottom: 22px;
+  border-radius: 999px;
+  font-family: var(--nav-font);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hx-brand);
+  background: rgba(16, 107, 167, 0.1);
+}
+
+.hx-eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--hx-brand);
+}
+
+.hx-title {
+  margin: 0 0 20px;
+  font-family: var(--heading-font);
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: var(--hx-ink);
+  text-wrap: balance;
+}
+
+.hx-title .hx-accent {
+  color: var(--hx-brand);
+}
+
+.hx-lead {
+  margin: 0 0 34px;
+  font-family: var(--default-font);
+  max-width: 540px;
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  line-height: 1.65;
+  color: var(--hx-ink-soft);
+}
+
+.hx-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hx-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-family: var(--nav-font);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+  border: 1.5px solid transparent;
+  text-decoration: none;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hx-btn i {
+  font-size: 16px;
+  transition: transform 0.25s ease;
+}
+
+.hx-btn:hover i {
+  transform: translateX(4px);
+}
+
+.hx-btn-primary {
+  background: var(--hx-brand);
+  color: #fff;
+  box-shadow: 0 14px 30px -12px rgba(16, 107, 167, 0.75);
+}
+
+.hx-btn-primary:hover {
+  background: #0c5a8c;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.hx-btn-ghost {
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--hx-ink);
+  border-color: rgba(11, 34, 54, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hx-btn-ghost:hover {
+  background: #fff;
+  color: var(--hx-brand);
+  transform: translateY(-2px);
+}
+
+/* Light-on-dark variant (video slide) */
+.hx-on-dark .hx-title,
+.hx-on-dark .hx-lead {
+  color: #fff;
+}
+
+.hx-on-dark .hx-lead {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.hx-on-dark .hx-title .hx-accent {
+  color: #7cc4f0;
+}
+
+.hx-on-dark .hx-eyebrow {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hx-on-dark .hx-eyebrow::before {
+  background: #7cc4f0;
+}
+
+.hx-on-dark .hx-btn-ghost {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.hx-on-dark .hx-btn-ghost:hover {
+  background: #fff;
+  color: var(--hx-ink);
+}
+
+/* Staggered entrance on the active slide */
+.hx-anim {
+  opacity: 0;
+  transform: translateY(26px);
+}
+
+.swiper-slide-active .hx-anim {
+  animation: hx-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  animation-delay: calc(var(--i, 0) * 0.12s + 0.2s);
+}
+
+@keyframes hx-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hx-zoom {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Controls: progress-bar pagination + round arrows */
+.hx-hero .hx-carousel .swiper-pagination {
+  position: absolute;
+  top: auto;
+  bottom: 44px;
+  left: max(24px, calc((100vw - 1320px) / 2 + 24px));
+  right: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+  text-align: left;
+}
+
+.hx-hero .hx-carousel .swiper-pagination-bullet {
+  position: relative;
+  width: 36px;
+  height: 4px;
+  margin: 0 !important;
+  border-radius: 999px;
+  background: rgba(120, 138, 156, 0.45);
+  opacity: 1;
+  overflow: hidden;
+  transition: width 0.4s ease;
+}
+
+.hx-hero .hx-carousel .swiper-pagination-bullet-active {
+  width: 72px;
+  background: rgba(120, 138, 156, 0.45);
+}
+
+.hx-hero .hx-carousel .swiper-pagination-bullet-active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--hx-brand-bright);
+  transform-origin: left center;
+  animation: hx-fill 8s linear forwards;
+}
+
+@keyframes hx-fill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.hx-hero .swiper-button-next,
+.hx-hero .swiper-button-prev {
+  display: flex;
+  top: auto;
+  bottom: 28px;
+  width: 52px;
+  height: 52px;
+  margin: 0;
+  border-radius: 50%;
+  color: var(--hx-ink);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px -10px rgba(11, 34, 54, 0.45);
+  z-index: 5;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.hx-hero .swiper-button-next {
+  right: max(24px, calc((100vw - 1320px) / 2 + 24px));
+}
+
+.hx-hero .swiper-button-prev {
+  left: auto;
+  right: calc(max(24px, calc((100vw - 1320px) / 2 + 24px)) + 64px);
+}
+
+.hx-hero .swiper-button-next::after,
+.hx-hero .swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.hx-hero .swiper-button-next:hover,
+.hx-hero .swiper-button-prev:hover {
+  background: var(--hx-brand);
+  color: #fff;
+  transform: scale(1.06);
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .hx-inner {
+    padding: 96px 24px 112px;
+  }
+
+  .hx-scrim {
+    background: linear-gradient(90deg, rgba(244, 246, 248, 0.94) 0%, rgba(244, 246, 248, 0.75) 45%, rgba(244, 246, 248, 0.05) 100%);
+  }
+
+  .hx-copy-glass {
+    padding: 32px 28px;
+  }
+}
+
+/* Mobile: artwork sits at the top, copy anchors to the bottom */
+@media (max-width: 767.98px) {
+  .hx-hero {
+    min-height: 680px;
+  }
+
+  .hx-bg,
+  .hx-bg-left {
+    background-size: auto 62%;
+    background-position: 78% 8%;
+    transform-origin: 78% 20%;
+  }
+
+  .hx-scrim {
+    background: linear-gradient(0deg, rgba(244, 246, 248, 1) 0%, rgba(244, 246, 248, 0.96) 48%, rgba(244, 246, 248, 0) 78%);
+  }
+
+  .hx-scrim-dark {
+    background: linear-gradient(0deg, rgba(7, 22, 38, 0.92) 0%, rgba(7, 22, 38, 0.45) 60%, rgba(7, 22, 38, 0.25) 100%);
+  }
+
+  .hx-inner,
+  .hx-inner-end {
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 96px 20px 92px;
+  }
+
+  .hx-copy-glass {
+    max-width: none;
+    padding: 24px 22px;
+    border-radius: 22px;
+  }
+
+  .hx-eyebrow {
+    margin-bottom: 14px;
+    font-size: 11px;
+  }
+
+  .hx-title {
+    margin-bottom: 12px;
+    font-size: 2rem;
+  }
+
+  .hx-lead {
+    margin-bottom: 22px;
+    font-size: 0.95rem;
+  }
+
+  .hx-btn {
+    padding: 13px 22px;
+    font-size: 13px;
+  }
+
+  .hx-hero .hx-carousel .swiper-pagination {
+    left: 20px;
+    bottom: 36px;
+  }
+
+  .hx-hero .swiper-button-next,
+  .hx-hero .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hx-anim {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
+
+  .hx-bg {
+    transform: none;
+    animation: none !important;
+  }
+}
+
+.hx-copy-glass .hx-title {
+  font-size: clamp(2rem, 3.6vw, 3.1rem);
+}

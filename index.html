@@ -23,6 +23,7 @@
   <!-- Main CSS File -->
   <link href="static/css/main.css" rel="stylesheet" />
   <link href="static/css/loader.css" rel="stylesheet" />
+  <link href="static/css/hero-modern.css" rel="stylesheet" />
 
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
@@ -46,7 +47,7 @@
 
   <!-- Navbar -->
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center p-3">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center px-3" style="max-width: 100%">
       <a href="/" class="logo d-flex align-items-center me-auto">
         <img class="img-fluid" src="static/img/OSTEON LOGO/logo.png" alt="" />
         <!-- <h1 class="sitename">Osteon Life Science</h1> -->
@@ -61,9 +62,9 @@
               <li class="dropdown">
                 <a href="#"><span>Trauma</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <!-- <li><a href="product-detail.html">Plates</a></li> -->
-                  <!-- <li><a href="product-detail.html">Nails</a></li> -->
-                  <!-- <li><a href="product-detail.html">Screws</a></li> -->
+                  <li><a href="product-detail.html">Bone plates</a></li>
+                  <li><a href="product-detail.html">Bone nails</a></li>
+                  <li><a href="product-detail.html">Bone screws</a></li>
                   <li><a href="product-detail.html">Pins</a></li>
                   <li><a href="product-detail.html">Wires</a></li>
                 </ul>
@@ -242,222 +243,116 @@
     </section>/Hero Section -->
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
-      <div class="hero-bg">
-        <img src="static/img/hero-bg-light.webp" alt="Background Image" />
-      </div>
-      <div class="container text-center p-0" style="max-width: 100%;">
-        <div class="swiper hero-carousel">
-          <div class="swiper-wrapper">
-            <!-- VIDEO SLIDE - First Slide -->
-            <div class="swiper-slide video-slide">
-              <video class="hero-video" autoplay muted loop playsinline>
-                <source src="static/img/19538560-uhd_3840_2160_24fps.mp4" type="video/mp4" />
-              </video>
-              <div class="video-overlay"></div>
-              <div class="row banner-content p-5 text-md-start">
-                <div class="content-wrapper col-md-7 d-flex flex-column justify-content-center">
-                  <div class="categories my-3 text-oste fw-bold">Premium Orthopedic Solutions</div>
-                  <h3 class="display-4 hero-heading fw-bold">
-                    Restoring Mobility,<br>Rebuilding Lives
-                  </h3>
-                  <p class="lead">
-                    Delivering precision-engineered trauma, spine, and joint implants trusted by surgeons worldwide for
-                    superior clinical outcomes.
-                  </p>
-                  <!-- <div class="row mt-2">
-                    <div class="col-12 col-md-6">
-                      <a href="product-detail.html"
-                        class="w-100 btn btn-oste-outline btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Explore
-                        Products</a>
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <a href="#contact"
-                        class="w-100 btn btn-oste btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Contact Us</a>
-                    </div>
-                  </div> -->
-                </div>
-                <div class="img-wrapper col-md-5 text-end d-none d-md-block"></div>
-              </div>
-            </div>
+    <section id="hero" class="hero section hx-hero" aria-label="Featured highlights">
+      <div class="swiper hero-carousel hx-carousel">
+        <div class="swiper-wrapper">
 
-            <!-- SLIDE 2 -->
-            <div class="swiper-slide image-slide">
-              <div class="slide-bg" style="background-image:url('static/img/Banner2.png');"></div>
-              <div class="image-overlay"></div>
-
-              <div class="row banner-content p-5 text-md-start">
-                <div class="content-wrapper col-lg-7 col-md-8 d-flex flex-column justify-content-center">
-                  <div class="categories my-3 fw-bold">Advanced Trauma Systems</div>
-
-                  <h3 class="display-4 hero-heading fw-bold">
-                    Precision Trauma<br>
-                    Implant Solutions
-                  </h3>
-
-                  <p class="lead">
-                    Engineered locking plates, screws and trauma systems designed for
-                    exceptional stability, faster recovery and reliable surgical outcomes.
-                  </p>
-
-                  <div class="row mt-2">
-                    <div class="col-md-6">
-                      <a href="products.html"
-                        class="w-100 btn btn-oste-outline btn-lg text-uppercase rounded-1">
-                        Explore Products
-                      </a>
-                    </div>
-
-                    <div class="col-md-6">
-                      <a href="contact.html"
-                        class="w-100 btn btn-oste btn-lg text-uppercase rounded-1">
-                        Contact Sales
-                      </a>
-                    </div>
-                  </div>
+          <!-- Slide 1: video -->
+          <div class="swiper-slide hx-slide hx-slide-video">
+            <video class="hx-video" autoplay muted loop playsinline aria-hidden="true">
+              <source src="static/img/19538560-uhd_3840_2160_24fps.mp4" type="video/mp4" />
+            </video>
+            <div class="hx-scrim hx-scrim-dark"></div>
+            <div class="hx-inner">
+              <div class="hx-copy hx-on-dark">
+                <span class="hx-eyebrow hx-anim" style="--i:0">Premium Orthopedic Solutions</span>
+                <h2 class="hx-title hx-anim" style="--i:1">Restoring Mobility,<br /><span class="hx-accent">Rebuilding Lives</span></h2>
+                <p class="hx-lead hx-anim" style="--i:2">
+                  Precision-engineered trauma, foot &amp; ankle and craniomaxillofacial implants trusted by surgeons
+                  worldwide for superior clinical outcomes.
+                </p>
+                <div class="hx-actions hx-anim" style="--i:3">
+                  <a href="product-detail.html" class="hx-btn hx-btn-primary">Explore Products <i class="bi bi-arrow-right"></i></a>
+                  <a href="index.html#contact" class="hx-btn hx-btn-ghost">Contact Us</a>
                 </div>
               </div>
             </div>
-
-            <!-- SLIDE 3 -->
-            <div class="swiper-slide image-slide">
-              <div class="slide-bg" style="background-image:url('static/img/placa_mini_e_micro_mao-1.png');"></div>
-              <div class="image-overlay"></div>
-
-              <div class="row banner-content p-5 text-md-start">
-                <div class="content-wrapper col-lg-7 col-md-8 d-flex flex-column justify-content-center">
-
-                  <div class="categories my-3 fw-bold">
-                    Mini & Micro Plating
-                  </div>
-
-                  <h3 class="display-4 hero-heading fw-bold">
-                    Designed For<br>
-                    Surgical Precision
-                  </h3>
-
-                  <p class="lead">
-                    High-performance mini and micro plating systems developed for
-                    maxillofacial, hand and small bone fixation procedures.
-                  </p>
-
-                  <div class="row mt-2">
-                    <div class="col-md-6">
-                      <a href="products.html"
-                        class="w-100 btn btn-oste-outline btn-lg text-uppercase rounded-1">
-                        View Portfolio
-                      </a>
-                    </div>
-
-                    <div class="col-md-6">
-                      <a href="contact.html"
-                        class="w-100 btn btn-oste btn-lg text-uppercase rounded-1">
-                        Request Quote
-                      </a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-            <!-- SLIDE 4 -->
-            <div class="swiper-slide image-slide">
-              <div class="slide-bg" style="background-image:url('static/img/Placa_pe-1.png');"></div>
-              <div class="image-overlay"></div>
-
-              <div class="row banner-content p-5 text-md-start">
-                <div class="content-wrapper col-lg-7 col-md-8 d-flex flex-column justify-content-center">
-
-                  <div class="categories my-3 fw-bold">
-                    Premium Orthopedic Technology
-                  </div>
-
-                  <h3 class="display-4 hero-heading fw-bold">
-                    Innovation That<br>
-                    Supports Every Surgery
-                  </h3>
-
-                  <p class="lead">
-                    Manufactured under stringent international quality standards to
-                    deliver dependable performance in every procedure.
-                  </p>
-
-                  <div class="row mt-2">
-
-                    <div class="col-md-6">
-                      <a href="about-us.html"
-                        class="w-100 btn btn-oste-outline btn-lg text-uppercase rounded-1">
-                        Learn More
-                      </a>
-                    </div>
-
-                    <div class="col-md-6">
-                      <a href="downloads.html"
-                        class="w-100 btn btn-oste btn-lg text-uppercase rounded-1">
-                        Download Catalog
-                      </a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-            <!-- SLIDE 5 -->
-            <div class="swiper-slide image-slide">
-              <div class="slide-bg" style="background-image:url('static/img/small_fragments_inferior_features-scaled.png.webp');"></div>
-              <div class="image-overlay"></div>
-
-              <div class="row banner-content p-5 text-md-end">
-                <div class="content-wrapper col-lg-5 col-md-4"></div>
-                <div class="content-wrapper col-lg-7 col-md-8 d-flex flex-column justify-content-center">
-
-                  <div class="categories my-3 fw-bold">
-                    Trusted Across The Globe
-                  </div>
-
-                  <h3 class="display-4 hero-heading fw-bold">
-                    Quality Healthcare<br>
-                    Without Compromise
-                  </h3>
-
-                  <p class="lead" style="max-width: 100% !important;">
-                    Delivering world-class orthopedic implants and OEM manufacturing
-                    solutions trusted by healthcare professionals worldwide.
-                  </p>
-
-                  <div class="row mt-2">
-
-                    <div class="col-md-6">
-                      <a href="contact.html"
-                        class="w-100 btn btn-oste-outline btn-lg text-uppercase rounded-1">
-                        Become a Partner
-                      </a>
-                    </div>
-
-                    <div class="col-md-6">
-                      <a href="about-us.html"
-                        class="w-100 btn btn-oste btn-lg text-uppercase rounded-1">
-                        Why Osteon
-                      </a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
           </div>
 
-          <!-- Navigation Buttons -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
+          <!-- Slide 2: skull / craniomaxillofacial -->
+          <div class="swiper-slide hx-slide">
+            <div class="hx-bg" style="background-image:url('static/img/Banner2.png');"></div>
+            <div class="hx-scrim"></div>
+            <div class="hx-inner">
+              <div class="hx-copy">
+                <span class="hx-eyebrow hx-anim" style="--i:0">Advanced Trauma Systems</span>
+                <h2 class="hx-title hx-anim" style="--i:1">Precision Trauma<br /><span class="hx-accent">Implant Solutions</span></h2>
+                <p class="hx-lead hx-anim" style="--i:2">
+                  Engineered locking plates, screws and trauma systems designed for exceptional stability, faster
+                  recovery and reliable surgical outcomes.
+                </p>
+                <div class="hx-actions hx-anim" style="--i:3">
+                  <a href="product-detail.html" class="hx-btn hx-btn-primary">Explore Products <i class="bi bi-arrow-right"></i></a>
+                  <a href="index.html#contact" class="hx-btn hx-btn-ghost">Contact Sales</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: hand / mini and micro plating -->
+          <div class="swiper-slide hx-slide">
+            <div class="hx-bg" style="background-image:url('static/img/placa_mini_e_micro_mao-1.png');"></div>
+            <div class="hx-scrim"></div>
+            <div class="hx-inner">
+              <div class="hx-copy">
+                <span class="hx-eyebrow hx-anim" style="--i:0">Mini &amp; Micro Plating</span>
+                <h2 class="hx-title hx-anim" style="--i:1">Designed For<br /><span class="hx-accent">Surgical Precision</span></h2>
+                <p class="hx-lead hx-anim" style="--i:2">
+                  High-performance mini and micro plating systems developed for maxillofacial, hand and small bone
+                  fixation procedures.
+                </p>
+                <div class="hx-actions hx-anim" style="--i:3">
+                  <a href="product-detail.html" class="hx-btn hx-btn-primary">View Portfolio <i class="bi bi-arrow-right"></i></a>
+                  <a href="index.html#contact" class="hx-btn hx-btn-ghost">Request Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: foot / foot and ankle -->
+          <div class="swiper-slide hx-slide">
+            <div class="hx-bg" style="background-image:url('static/img/Placa_pe-1.png');"></div>
+            <div class="hx-scrim"></div>
+            <div class="hx-inner">
+              <div class="hx-copy">
+                <span class="hx-eyebrow hx-anim" style="--i:0">Premium Orthopedic Technology</span>
+                <h2 class="hx-title hx-anim" style="--i:1">Innovation That<br /><span class="hx-accent">Supports Every Surgery</span></h2>
+                <p class="hx-lead hx-anim" style="--i:2">
+                  Manufactured under stringent international quality standards to deliver dependable performance in
+                  every procedure.
+                </p>
+                <div class="hx-actions hx-anim" style="--i:3">
+                  <a href="about-us.html" class="hx-btn hx-btn-primary">Learn More <i class="bi bi-arrow-right"></i></a>
+                  <a href="downloads.html" class="hx-btn hx-btn-ghost">Download Catalog</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5: long bones, copy on a glass panel -->
+          <div class="swiper-slide hx-slide">
+            <div class="hx-bg hx-bg-left" style="background-image:url('static/img/small_fragments_inferior_features-scaled.png.webp');"></div>
+            <div class="hx-inner hx-inner-end">
+              <div class="hx-copy hx-copy-glass">
+                <span class="hx-eyebrow hx-anim" style="--i:0">Trusted Across The Globe</span>
+                <h2 class="hx-title hx-anim" style="--i:1">Quality Healthcare<br /><span class="hx-accent">Without Compromise</span></h2>
+                <p class="hx-lead hx-anim" style="--i:2">
+                  World-class orthopedic implants and OEM manufacturing solutions trusted by healthcare professionals
+                  worldwide.
+                </p>
+                <div class="hx-actions hx-anim" style="--i:3">
+                  <a href="index.html#contact" class="hx-btn hx-btn-primary">Become a Partner <i class="bi bi-arrow-right"></i></a>
+                  <a href="about-us.html" class="hx-btn hx-btn-ghost">Why Osteon</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+
+        <div class="swiper-button-next" aria-label="Next slide"></div>
+        <div class="swiper-button-prev" aria-label="Previous slide"></div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
     
