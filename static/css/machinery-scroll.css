@@ -1,0 +1,360 @@
+/*--------------------------------------------------------------
+# Machinery Scroll Showcase (about-us page)
+# All selectors are prefixed with "mx-" so nothing in main.css is affected.
+--------------------------------------------------------------*/
+.mx-section {
+  --mx-top: 132px;
+  --mx-step: 42vh;
+  --mx-stage-height: min(calc(100vh - var(--mx-top) - 24px), 720px);
+  --mx-border: #e3eaf1;
+  --mx-muted: #6b7782;
+  --mx-ink: #17202a;
+  background-color: #f8fbfc;
+  padding-top: 4rem;
+}
+
+.mx-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+/* The track is tall; the stage inside sticks while the user scrolls through it */
+.mx-track {
+  position: relative;
+  height: calc(var(--mx-stage-height) + var(--mx-count, 15) * var(--mx-step));
+}
+
+.mx-stage {
+  position: sticky;
+  top: var(--mx-top);
+  height: var(--mx-stage-height);
+  min-height: 460px;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+/* ---------- Left: list viewport ---------- */
+.mx-list-viewport {
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
+}
+
+.mx-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.6s cubic-bezier(0.22, 0.8, 0.28, 1);
+  will-change: transform;
+}
+
+.mx-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.15rem;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  background: #fff;
+  border: 1px solid var(--mx-border);
+  border-radius: 14px;
+  cursor: pointer;
+  opacity: 0.62;
+  transform: scale(0.97);
+  transform-origin: left center;
+  transition: opacity 0.4s ease, transform 0.4s ease, background-color 0.4s ease,
+    border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mx-item::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  bottom: -1px;
+  width: 4px;
+  border-radius: 14px 0 0 14px;
+  background: var(--accent-color);
+  transform: scaleY(0);
+  transition: transform 0.4s ease;
+}
+
+.mx-item:hover {
+  opacity: 0.9;
+}
+
+.mx-item:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.mx-item.is-active {
+  opacity: 1;
+  transform: scale(1);
+  background: #f8fbff;
+  border-color: color-mix(in srgb, var(--accent-color), transparent 65%);
+  box-shadow: 0 10px 28px rgba(16, 107, 167, 0.1);
+}
+
+.mx-item.is-active::before {
+  transform: scaleY(1);
+}
+
+.mx-item-icon {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.mx-item.is-active .mx-item-icon {
+  color: #fff;
+  background: var(--accent-color);
+}
+
+.mx-item-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.mx-item-title {
+  display: block;
+  font-family: var(--nav-font);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--mx-ink);
+}
+
+.mx-item-desc {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--mx-muted);
+}
+
+.mx-item-chevron {
+  flex: 0 0 auto;
+  font-size: 0.95rem;
+  color: var(--accent-color);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.mx-item.is-active .mx-item-chevron {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---------- Right: detail panel ---------- */
+.mx-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 2rem 2rem 1.5rem;
+  background: #fff;
+  border: 1px solid var(--mx-border);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(16, 33, 52, 0.04);
+}
+
+.mx-panel-head {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.mx-panel-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.mx-tag {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  font-family: var(--nav-font);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border-radius: 999px;
+}
+
+.mx-counter {
+  font-family: var(--nav-font);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--mx-muted);
+}
+
+.mx-panel-title {
+  margin: 0 0 0.4rem;
+  font-family: var(--nav-font);
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--mx-ink);
+  text-wrap: balance;
+}
+
+.mx-panel-desc {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--mx-muted);
+  text-wrap: pretty;
+}
+
+.mx-panel.is-changing .mx-panel-head {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.mx-photo-frame {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  margin-top: 1.5rem;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #e9eff4;
+}
+
+.mx-photo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: #8a99a6;
+  background: linear-gradient(135deg, #eef3f7 0%, #dfe8ef 100%);
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.55s ease, transform 0.8s ease;
+}
+
+.mx-photo.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mx-photo > i {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.mx-photo-label {
+  font-family: var(--nav-font);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.mx-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mx-progress {
+  height: 3px;
+  margin-top: 1.1rem;
+  overflow: hidden;
+  background: #e9eff4;
+  border-radius: 3px;
+}
+
+.mx-progress-bar {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--accent-color);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+/* ---------- Tablet / mobile: image on top, list below ---------- */
+@media (max-width: 991.98px) {
+  .mx-section {
+    --mx-top: 96px;
+    --mx-step: 36vh;
+    --mx-stage-height: calc(100vh - var(--mx-top) - 12px);
+    padding-top: 3rem;
+  }
+
+  .mx-stage {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 0.95fr) minmax(0, 1fr);
+    gap: 1rem;
+    min-height: 0;
+  }
+
+  .mx-panel {
+    order: -1;
+    padding: 1rem 1.1rem 0.9rem;
+    border-radius: 16px;
+  }
+
+  .mx-panel-title {
+    font-size: 1.15rem;
+  }
+
+  .mx-panel-desc {
+    display: none;
+  }
+
+  .mx-photo-frame {
+    margin-top: 0.8rem;
+  }
+
+  .mx-progress {
+    margin-top: 0.8rem;
+  }
+
+  .mx-item {
+    padding: 0.75rem 0.9rem;
+  }
+
+  .mx-item-desc {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mx-list,
+  .mx-item,
+  .mx-item::before,
+  .mx-item-chevron,
+  .mx-photo,
+  .mx-panel-head,
+  .mx-progress-bar {
+    transition: none;
+  }
+}
